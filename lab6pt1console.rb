@@ -1,2 +1,5 @@
 require_relative 'lab6pt1module.rb'
-puts(Integral.input(1))
+puts("enter precision of your wish")
+inputString = gets
+
+puts(Integral.input(Integer(inputString)))
