@@ -32,7 +32,10 @@ def Integral.innerFunction(x)
     return innerFuncRes
 end
 
+   
+
 end
+
 
 
 

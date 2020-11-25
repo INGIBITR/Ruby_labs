@@ -1,23 +1,33 @@
-def divisible_by?(num)
-    ->input{ (input % num).zero? }
-  end
+module EnumCalc
   
-  def fizzbuzz_from(value)
-    Enumerator::Lazy.new(value..Float::INFINITY) do |yielder, val|
-      yielder << case val
-      when divisible_by?(15)
-        "FizzBuzz"
-      when divisible_by?(3)
-        "Fizz"
-      when divisible_by?(5)
-        "Buzz"
-      else
-        val
+  def self.newCalc(eps)
+    overallSum = 0.0
+    x = 0.0
+    n = 100000
+    exact = 1/3.to_f
+
+  
+   (Enumerator.new do |y|
+      precision = 1.0/n
+      (0..(n-1)).each do |_i|
+          overallSum += innerFunction(x)*precision
+          x+= precision  
+          y << overallSum  
       end
-    end end
-  
-  x = fizzbuzz_from(7)
-  # => #<Enumerator::Lazy: 7..Infinity:each>
-  
-  9.times { puts x.next }
-  # 7
+    end
+    
+  ).take_while { |y| ((y-exact).abs > eps)}
+
+ overallSum
+  end
+
+    def self.innerFunction(x)
+      innerFuncRes = 0.0
+      innerFuncRes=x*Math.sqrt((1-(x*x)).abs)
+      print()
+     
+      return innerFuncRes
+    end
+end
+
+
