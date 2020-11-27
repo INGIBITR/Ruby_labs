@@ -4,11 +4,8 @@ def Integral.input(numberOfIterations)
     
     upper = 1.0
     lower = 0.0
-    counter = 0.0
-    
-   
-    
-   overallSum = 0.0
+    counter = 0.0 
+    overallSum = 0.0
 
     precision = numberOfIterations
     
