@@ -15,7 +15,7 @@ class TestClass < Minitest::Test
   end
 
   def test_input_failure
-    assert_throws(:"invalid value for Integer(): s") {Integral.input(Integer("s"))}
+    assert_throws(:"String can't be coerced into Float") {Integral.input("s")}
   end
 
   

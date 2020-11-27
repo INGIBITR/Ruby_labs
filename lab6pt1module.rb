@@ -9,7 +9,7 @@ def Integral.input(numberOfIterations)
 
     precision = numberOfIterations
     
-   
+   if precision.
     iteration = (upper-lower)/precision
     overallSum = (innerFunction(1)-innerFunction(0))/2
    for i in 1..(precision-1) do
