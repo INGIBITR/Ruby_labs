@@ -1,23 +1,35 @@
-config = IO.read("lab7text.txt")
-arrayOfData = config.split(" ")
-beginn = "0"
-print arrayOfData.count
-for checker in 0..100 do
-    
-    if (arrayOfData[checker].to_f == 1)
+module Lab7pt1
+  def self.output
+    config = IO.read("lab7text.txt")
+    arrayOfData = config.split("\n")
+
+    for checker in 0..arrayOfData.count - 1
+      tempstring = arrayOfData[checker]
+      puts("\n")
+
+      if (tempstring[0] == "1")
         puts "It is a segment"
-    arrayOfData.delete_at(0)
+        tempstring = tempstring[2..tempstring.length]
+        #puts "modified string #{tempstring}"
+        coords = tempstring.split
+
         puts "Its coords are: 
-        x1:#{arrayOfData[0]}
-        y1:#{arrayOfData[1]}
-        x2:#{arrayOfData[2]}
-        y2:#{arrayOfData[3]}
-        and its length is #{Math.sqrt(((arrayOfData[2].to_f-arrayOfData[0].to_f) **2) + ((arrayOfData[3].to_f-arrayOfData[1].to_f) **2))}"
-       
-       for deleter in 0..4 do
-           arrayOfData.delete_at(0)
-       end
-   
+       x1:#{coords[0]}
+       y1:#{coords[1]}
+       x2:#{coords[2]}
+       y2:#{coords[3]}
+       and its length is 
+       #{Math.sqrt(((coords[2].to_f - coords[0].to_f) ** 2) +
+                   ((coords[3].to_f - coords[1].to_f) ** 2))}"
+      elsif (tempstring[0] == "2")
+        puts "It is a circle"
+        tempstring = tempstring[2..tempstring.length]
+        coords = tempstring.split
+        puts "Its coords are:
+        x: #{coords[0]}
+        y: #{coords[1]}
+        and it has a radius of #{coords[2]}"
+      end
     end
+  end
 end
-print arrayOfData
