@@ -1,11 +1,12 @@
 module Work
-def Work.input(inpstr, inpnumb)
+  def Work.input(inpstr, inpnumb)
+    output = String.new
     arrstr = inpstr.split
     arrnumb = inpnumb.split
     arrstr.each_index do |idx|
-        output=arrstr[idx].slice(0,arrnumb[idx].to_i)
-        puts(output)
-        
+      output.concat(arrstr[idx].slice(0, arrnumb[idx].to_i), " ")
     end
-end
+    print(output)
+    return output
+  end
 end
