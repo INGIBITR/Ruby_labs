@@ -5,19 +5,16 @@ integralType = gets
 integralType = integralType.to_i
 puts("enter precision")
 myPrecision = gets
-myPrecision = myPrecision.to_i
-l = lambda { |precision, numOfIntegral| puts(Integral.input(precision,integralType))}
+l = lambda { |precision, numOfIntegral| puts(Integral.input(precision, integralType)) }
 l.call(myPrecision, integralType)
 print(integralType)
-
-
 
 print()
 
 def putWithBlock
-    return "Unexpected error occured" unless block_given?
-    yield
-puts("It works!")
+  return "Unexpected error occured" unless block_given?
+  yield
+  puts("It works!")
 end
 
-putWithBlock {puts(Integral.input(myPrecision,integralType))}
+putWithBlock { puts(Integral.input(myPrecision, integralType)) }
