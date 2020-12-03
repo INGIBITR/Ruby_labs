@@ -6145,3 +6145,252 @@ Processing by LabController#calculate as */*
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 363)
 
 
+Started GET "/?commit=%D0%92%D0%B2%D0%BE%D0%B4" for ::1 at 2020-12-04 02:20:02 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LabController#index as HTML
+  Parameters: {"commit"=>"Ввод"}
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 8235)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:20:08 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 3941)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:20:08 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3946)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:20:53 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3937)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:20:56 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3943)
+
+
+Started GET "/index" for ::1 at 2020-12-04 02:21:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/index" for ::1 at 2020-12-04 02:21:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-04 02:21:04 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 3966)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:22:12 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 3844)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:24:11 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 3909)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:24:37 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 3912)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:25:21 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 3918)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:26:50 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3913)
+
+
+Started GET "/calculate.json?x=982324" for ::1 at 2020-12-04 02:26:50 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"982324"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:27:25 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3910)
+
+
+Started GET "/calculate.json?x=982324" for ::1 at 2020-12-04 02:27:26 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"982324"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:27:43 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 3913)
+
+
+Started GET "/calculate.json?x=982324" for ::1 at 2020-12-04 02:27:44 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"982324"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:28:33 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3913)
+
+
+Started GET "/calculate.json?x=982324" for ::1 at 2020-12-04 02:28:34 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"982324"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:28:53 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 3913)
+
+
+Started GET "/calculate.json?x=982324" for ::1 at 2020-12-04 02:28:54 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"982324"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 335)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:30:01 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3920)
+
+
+Started GET "/calculate.json?x=982324" for ::1 at 2020-12-04 02:30:02 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"982324"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/" for ::1 at 2020-12-04 02:30:15 +0300
+Processing by LabController#index as HTML
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 3913)
+
+
+Started GET "/calculate.json?x=982324" for ::1 at 2020-12-04 02:30:16 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"982324"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
