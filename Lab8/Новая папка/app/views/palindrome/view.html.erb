@@ -1,0 +1,17 @@
+<h1>Palindrome machine</h1>
+
+<p> Steps: </p>
+<table border="1px">
+  <% $currentiteration.each do |res| %>
+    <tr>
+      <td> <%= res.to_s %> </td>
+      <%if res == $currentiteration.length - 1 %>
+      <td id= "1"> <%= $currentnumber[res.to_i] %> </td>
+      <%else%>
+      <td> <%= $currentnumber[res.to_i] %> </td>
+      <%end%>
+      <td> <%= res == $currentiteration.length - 1  ? "found it" : "not yet" %> </td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "Back to input", :palindrome_input %>
