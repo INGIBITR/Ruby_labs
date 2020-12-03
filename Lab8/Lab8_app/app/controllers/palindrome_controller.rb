@@ -1,6 +1,5 @@
 class PalindromeController < ApplicationController
-  currentnumber = []
-  currentiteration = []
+
   def input
   end
 
