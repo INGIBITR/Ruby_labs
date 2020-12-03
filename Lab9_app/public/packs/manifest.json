@@ -9,6 +9,16 @@
       "js.map": [
         "/packs/js/application-9afcbb5693aa87623e69.js.map"
       ]
+    },
+    "palindrome": {
+      "js": [
+        "/packs/js/palindrome-b94fa3ee179601ff93e2.js"
+      ],
+      "js.map": [
+        "/packs/js/palindrome-b94fa3ee179601ff93e2.js.map"
+      ]
     }
-  }
+  },
+  "palindrome.js": "/packs/js/palindrome-b94fa3ee179601ff93e2.js",
+  "palindrome.js.map": "/packs/js/palindrome-b94fa3ee179601ff93e2.js.map"
 }

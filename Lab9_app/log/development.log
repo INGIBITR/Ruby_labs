@@ -1488,3 +1488,223 @@ Processing by PalindromeController#view as HTML
 Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 4022)
 
 
+Started GET "/palindrome/view?num=4932&commit=Create+palindrome" for ::1 at 2020-12-03 15:41:17 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab9_app/app/controllers/palindrome_controller.rb:39: `$(' is not allowed as a global variable name
+/Users/ingibitr/Documents/Ruby_labs/Lab9_app/app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+    $(document).ready(() => {
+    ^):
+  
+app/controllers/palindrome_controller.rb:39: `$(' is not allowed as a global variable name
+app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+app/controllers/palindrome_controller.rb:39: `$(' is not allowed as a global variable name
+app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+app/controllers/palindrome_controller.rb:39: `$(' is not allowed as a global variable name
+app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+Started GET "/palindrome/view?num=4932&commit=Create+palindrome" for ::1 at 2020-12-03 15:42:20 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab9_app/app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+app/controllers/palindrome_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+Started GET "/palindrome/view?num=4932&commit=Create+palindrome" for ::1 at 2020-12-03 15:42:35 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"4932", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 1.0ms | Allocations: 362)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs/Lab9_app/public/packs
+[Webpacker] Hash: d5597747e4af85806aba
+Version: webpack 4.44.2
+Time: 1897ms
+Built at: 03.12.2020 15:42:40
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+     js/palindrome-b94fa3ee179601ff93e2.js   3.89 KiB   palindrome  [emitted] [immutable]  palindrome
+ js/palindrome-b94fa3ee179601ff93e2.js.map   3.52 KiB   palindrome  [emitted] [dev]        palindrome
+                             manifest.json  696 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+Entrypoint palindrome = js/palindrome-b94fa3ee179601ff93e2.js js/palindrome-b94fa3ee179601ff93e2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/palindrome.js] 0 bytes {palindrome} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 5141ms (Views: 5139.1ms | ActiveRecord: 0.0ms | Allocations: 11549)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:42:42 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 1.2ms | Allocations: 376)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 4456)
+
+
+Started GET "/palindrome/view?num=34345&commit=Create+palindrome" for ::1 at 2020-12-03 15:42:46 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"34345", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4044)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:43:13 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 0.3ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 4099)
+
+
+Started GET "/palindrome/view?num=11123&commit=Create+palindrome" for ::1 at 2020-12-03 15:43:17 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"11123", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.2ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4041)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:43:28 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 0.3ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 4102)
+
+
+Started GET "/palindrome/view?num=1234&commit=Create+palindrome" for ::1 at 2020-12-03 15:43:31 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"1234", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4029)
+
+
+Started GET "/palindrome/view?num=1234&commit=Create+palindrome" for ::1 at 2020-12-03 15:44:18 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"1234", "commit"=>"Create palindrome"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 567)
+
+
+  
+NoMethodError (undefined method `[]=' for nil:NilClass):
+  
+app/controllers/palindrome_controller.rb:15:in `palindrome?'
+app/controllers/palindrome_controller.rb:10:in `view'
+Started GET "/palindrome/view?num=1234&commit=Create+palindrome" for ::1 at 2020-12-03 15:44:31 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"1234", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.2ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 4171)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:44:32 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 0.4ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms | Allocations: 4097)
+
+
+Started GET "/palindrome/view?num=323&commit=Create+palindrome" for ::1 at 2020-12-03 15:44:34 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"323", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4028)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:44:36 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 0.3ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 4101)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:44:38 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 0.2ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 4098)
+
+
+Started GET "/palindrome/view?num=1234&commit=Create+palindrome" for ::1 at 2020-12-03 15:44:42 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"1234", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 4041)
+
+
+Started GET "/palindrome/view?num=1234&commit=Create+palindrome" for ::1 at 2020-12-03 15:45:15 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"1234", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.8ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 5224)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:45:16 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 1.0ms | Allocations: 344)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms | Allocations: 4422)
+
+
+Started GET "/palindrome/view?num=234&commit=Create+palindrome" for ::1 at 2020-12-03 15:45:18 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"234", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.2ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4037)
+
+
+Started GET "/palindrome/view?num=234&commit=Create+palindrome" for ::1 at 2020-12-03 15:45:33 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"234", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 1.0ms | Allocations: 315)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 5213)
+
+
+Started GET "/palindrome/input" for ::1 at 2020-12-03 15:45:34 +0300
+Processing by PalindromeController#input as HTML
+  Rendering palindrome/input.html.erb within layouts/application
+  Rendered palindrome/input.html.erb within layouts/application (Duration: 0.6ms | Allocations: 344)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 4419)
+
+
+Started GET "/palindrome/view?num=234&commit=Create+palindrome" for ::1 at 2020-12-03 15:45:37 +0300
+Processing by PalindromeController#view as HTML
+  Parameters: {"num"=>"234", "commit"=>"Create palindrome"}
+  Rendering palindrome/view.html.erb within layouts/application
+  Rendered palindrome/view.html.erb within layouts/application (Duration: 0.2ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 4028)
+
+
