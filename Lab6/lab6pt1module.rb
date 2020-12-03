@@ -1,6 +1,6 @@
 module Integral
-  def Integral.input(numberOfIterations)
-    inpstring = String.new
+  def self.input(numberOfIterations)
+    inpstring = ''
     upper = 1.0
     lower = 0.0
     counter = 0.0
@@ -8,27 +8,27 @@ module Integral
     inpstring = numberOfIterations
     begin
       Integer(inpstring)
-    rescue
-      #puts "Your input is not an integer"
-      return "Your input is not an integer"
+    rescue StandardError
+      # puts "Your input is not an integer"
+      return 'Your input is not an integer'
     end
     precision = numberOfIterations.to_i
 
     iteration = (upper - lower) / precision
     overallSum = (innerFunction(1) - innerFunction(0)) / 2
-    for i in 1..(precision - 1)
+    (1..(precision - 1)).each do |_i|
       counter += iteration
       overallSum += innerFunction(counter)
     end
-    overallSum = overallSum * iteration
-    return overallSum
+    overallSum *= iteration
+    overallSum
   end
 
-  def Integral.innerFunction(x)
+  def self.innerFunction(x)
     innerFuncRes = 0.0
     innerFuncRes = x * Math.sqrt((1 - (x * x)).abs)
-    print()
+    print
 
-    return innerFuncRes
+    innerFuncRes
   end
 end

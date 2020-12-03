@@ -1,5 +1,5 @@
-require_relative "lab7pt1module.rb"
-require "minitest/autorun"
+require_relative 'lab7pt1module'
+require 'minitest/autorun'
 
 # Test Class
 class TestClass < Minitest::Test
@@ -8,10 +8,10 @@ class TestClass < Minitest::Test
   def setup; end
 
   def test_input_failure
-    assert_equal(Lab7pt1.output("badtext.txt"), "You have a mistake in your input")
+    assert_equal(Lab7pt1.output('badtext.txt'), 'You have a mistake in your input')
   end
 
-  def test_input_failure1
-    assert_equal(Lab7pt1.output("string"), "Error reading file")
+  def test_input_failure_no_file
+    assert_equal(Lab7pt1.output('string'), 'Error reading file')
   end
 end

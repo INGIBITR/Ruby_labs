@@ -1,20 +1,13 @@
-require_relative "lab6pt3module.rb"
-integralType = 0
-puts("enter 1 or 2")
-integralType = gets
-integralType = integralType.to_i
-puts("enter precision")
-myPrecision = gets
-l = lambda { |precision, numOfIntegral| puts(Integral.input(precision, integralType)) }
-l.call(myPrecision, integralType)
-print(integralType)
+require_relative 'lab6pt3module'
 
-print()
+lam1 = ->(x) { x + Math.cos(x) }
+lam2 = ->(x) { Math.tan(x + 1) / (x + 1) }
 
-def putWithBlock
-  return "Unexpected error occured" unless block_given?
-  yield
-  puts("It works!")
-end
-
-putWithBlock { puts(Integral.input(myPrecision, integralType)) }
+puts('Введите n: ')
+num = gets
+block1 = Integral.blockintprg(-1, 4, num.to_i) { |x| x + Math.cos(x) }
+block2 = Integral.blockintprg(1, 2, num.to_i) { |x| Math.tan(x + 1) / (x + 1) }
+puts('Значение первого интеграла через lambdas: ' + Integral.blockintprg(-1, 4, num.to_i, &lam1).to_s)
+puts('Значение второго интеграла через lambdas: ' + Integral.blockintprg(1, 2, num.to_i, &lam2).to_s)
+puts('Значение первого интеграла через блоки: ' + block1.to_s)
+puts('Значение второго интеграла через блоки: ' + block2.to_s)

@@ -1,5 +1,5 @@
-require_relative "lab7pt2module.rb"
-require "minitest/autorun"
+require_relative 'lab7pt2module'
+require 'minitest/autorun'
 
 # Test Class
 class TestClass < Minitest::Test

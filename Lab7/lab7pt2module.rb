@@ -8,11 +8,11 @@ module Strings
     end
 
     def calc_area
-      return @length * @width
+      @length * @width
     end
 
     def print_properties
-      return "length: #{@length}\nwidth: #{@width}"
+      "length: #{@length}\nwidth: #{@width}"
     end
   end
 
@@ -23,11 +23,11 @@ module Strings
     end
 
     def calc_volume
-      return calc_area * @height
+      calc_area * @height
     end
 
     def print_properties
-      return "#{super}\nheight: #{@height}"
+      "#{super}\nheight: #{@height}"
     end
   end
 end

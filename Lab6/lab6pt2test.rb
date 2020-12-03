@@ -1,5 +1,5 @@
-require_relative "lab6pt2module.rb"
-require "minitest/autorun"
+require_relative 'lab6pt2module'
+require 'minitest/autorun'
 
 # Test Class
 class TestClass < Minitest::Test
@@ -8,7 +8,6 @@ class TestClass < Minitest::Test
   def setup; end
 
   def test_correct
-
     # assert_equal(Integral.input(10000), 0.33333303850902046, "failure")
     assert_in_delta(0.333333333333333333, EnumCalc.newCalc(0.01), 0.01)
   end
@@ -19,6 +18,6 @@ class TestClass < Minitest::Test
   end
 
   def test_input_failure
-    assert_equal(EnumCalc.newCalc("string"), "Your input is not an integer")
+    assert_equal(EnumCalc.newCalc('string'), 'Your input is not an integer')
   end
 end
