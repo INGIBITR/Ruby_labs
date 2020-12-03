@@ -7,26 +7,38 @@ class LabController < ApplicationController
   def calculate
     x_param = params[:x]
     result = ''
-
+    @currentnumber = []
+    @currentiteration = []
+    iteration = 0
+    @currentnumber[0] = x_param
+    @currentiteration[0] = 0
+    values = []
+    
     if x_param == ''
       result = 'Заполните поле'
-    elsif x_param.to_i.negative?
-      result = 'Введите неотрицательное число'
-    elsif x_param.to_i.positive?
-      x = x_param.to_i
-      x_i = 1
-      x_i1 = 0
-      values = []
-      while ((x_i1**2 - x) / x).abs >= 0.001
-        x_i1 = 0.5 * (x_i + (x / x_i))
-        x_i = x_i1
-        values.push(x_i1.ceil(2))
-      end
+    elsif x_param.to_i <= 0
+      result = 'Введите число больше нуля'
+    elsif x_param.to_i >= 0
+      values.push(x_param)
+      
 
+      while x_param.to_s != x_param.to_s.reverse
+        iteration += 1
+        if x_param.to_s != x_param.to_s.reverse
+          @currentiteration[iteration] = iteration
+          rev = x_param.to_s.reverse.to_i
+          x_param = rev + x_param.to_i
+          @currentnumber[iteration] = x_param
+          print("x after iteration #{iteration}:\n")
+          # print(x, "\n")
+
+        end
+        values.push(x_param)
+      end
       result = values
-    else
-      result = [0]
     end
+    # values.push(30)
+    
 
     render json: { result: result }
   end
