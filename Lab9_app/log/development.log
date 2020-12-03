@@ -6122,3 +6122,26 @@ Processing by LabController#calculate as */*
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 504)
 
 
+Started GET "/?commit=%D0%92%D0%B2%D0%BE%D0%B4" for ::1 at 2020-12-04 01:15:45 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LabController#index as HTML
+  Parameters: {"commit"=>"Ввод"}
+  Rendering lab/index.html.erb within layouts/application
+  Rendered lab/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 8235)
+
+
+Started GET "/calculate.json?x=24417" for ::1 at 2020-12-04 01:15:52 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"24417"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/calculate.json?x=29472" for ::1 at 2020-12-04 01:16:01 +0300
+Processing by LabController#calculate as */*
+  Parameters: {"x"=>"29472"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 363)
+
+
