@@ -1,6 +1,6 @@
 class PalindromeController < ApplicationController
-  $currentnumber = []
-  $currentiteration = []
+  currentnumber = []
+  currentiteration = []
   def input
   end
 
@@ -13,18 +13,20 @@ class PalindromeController < ApplicationController
 
   
     def palindrome?(x)
+      @currentnumber = []
+      @currentiteration = []
         iteration = 0
-        $currentnumber[0] = x
-        $currentiteration[0] = 0
+        @currentnumber[0] = x
+        @currentiteration[0] = 0
 
       while x.to_s != x.to_s.reverse 
         iteration +=1
         if  x.to_s != x.to_s.reverse 
             
-            $currentiteration[iteration] = iteration
+            @currentiteration[iteration] = iteration
             rev = (x.to_s.reverse).to_i
             x = rev + x
-            $currentnumber[iteration] = x
+            @currentnumber[iteration] = x
             print("x after iteration #{iteration}:\n")
             print(x,"\n")
            # print("current iteration: #{iteration}")
