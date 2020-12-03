@@ -1,24 +1,24 @@
 {
-  "application.js": "/packs/js/application-9afcbb5693aa87623e69.js",
-  "application.js.map": "/packs/js/application-9afcbb5693aa87623e69.js.map",
+  "ajaxRequest.js": "/packs/js/ajaxRequest-4040cd90b015220501c0.js",
+  "ajaxRequest.js.map": "/packs/js/ajaxRequest-4040cd90b015220501c0.js.map",
+  "application.js": "/packs/js/application-29d92546ef083681b1f2.js",
+  "application.js.map": "/packs/js/application-29d92546ef083681b1f2.js.map",
   "entrypoints": {
-    "application": {
+    "ajaxRequest": {
       "js": [
-        "/packs/js/application-9afcbb5693aa87623e69.js"
+        "/packs/js/ajaxRequest-4040cd90b015220501c0.js"
       ],
       "js.map": [
-        "/packs/js/application-9afcbb5693aa87623e69.js.map"
+        "/packs/js/ajaxRequest-4040cd90b015220501c0.js.map"
       ]
     },
-    "palindrome": {
+    "application": {
       "js": [
-        "/packs/js/palindrome-b94fa3ee179601ff93e2.js"
+        "/packs/js/application-29d92546ef083681b1f2.js"
       ],
       "js.map": [
-        "/packs/js/palindrome-b94fa3ee179601ff93e2.js.map"
+        "/packs/js/application-29d92546ef083681b1f2.js.map"
       ]
     }
-  },
-  "palindrome.js": "/packs/js/palindrome-b94fa3ee179601ff93e2.js",
-  "palindrome.js.map": "/packs/js/palindrome-b94fa3ee179601ff93e2.js.map"
+  }
 }
