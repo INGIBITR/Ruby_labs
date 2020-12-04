@@ -8095,3 +8095,356 @@ Processing by XmlController#index as HTML
 Completed 200 OK in 14ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1592)
 
 
+Started GET "/?num=300&format=html" for ::1 at 2020-12-04 05:28:59 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by XmlController#index as HTML
+  Parameters: {"num"=>"300"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 657)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/xml_controller.rb:29:in `find_palindromes'
+app/controllers/xml_controller.rb:4:in `index'
+Started GET "/?num=300&format=html" for ::1 at 2020-12-04 05:29:21 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+  Parameters: {"num"=>"300"}
+  Rendering inline template
+  Rendered inline template (Duration: 0.3ms | Allocations: 71)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 826)
+
+
+Started GET "/?num=300&format=html" for ::1 at 2020-12-04 05:33:44 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+  Parameters: {"num"=>"300"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 613)
+
+
+  
+NoMethodError (undefined method `find_index' for 300:Integer):
+  
+app/controllers/xml_controller.rb:11:in `block in index'
+app/controllers/xml_controller.rb:11:in `map'
+app/controllers/xml_controller.rb:11:in `index'
+Started GET "/?num=300&format=html" for ::1 at 2020-12-04 05:34:13 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+  Parameters: {"num"=>"300"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `index' for 300:Integer):
+  
+app/controllers/xml_controller.rb:11:in `block in index'
+app/controllers/xml_controller.rb:11:in `map'
+app/controllers/xml_controller.rb:11:in `index'
+Started GET "/?num=300&format=html" for ::1 at 2020-12-04 05:36:49 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+  Parameters: {"num"=>"300"}
+  Rendering inline template
+  Rendered inline template (Duration: 0.3ms | Allocations: 71)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 691)
+
+
+Started GET "/?num=300&format=html" for ::1 at 2020-12-04 05:38:12 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+  Parameters: {"num"=>"300"}
+  Rendering inline template
+  Rendered inline template (Duration: 0.2ms | Allocations: 70)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 690)
+
+
+Started GET "/?num=2482553&format=html" for ::1 at 2020-12-04 05:38:36 +0300
+Processing by XmlController#index as HTML
+  Parameters: {"num"=>"2482553"}
+  Rendering inline template
+  Rendered inline template (Duration: 0.3ms | Allocations: 71)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 614)
+
+
+Started GET "/?num=2482553&format=rss" for ::1 at 2020-12-04 05:38:57 +0300
+Processing by XmlController#index as RSS
+  Parameters: {"num"=>"2482553"}
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 7012)
+
+
+Started GET "/?num=2482553&format=xml" for ::1 at 2020-12-04 05:39:03 +0300
+Processing by XmlController#index as XML
+  Parameters: {"num"=>"2482553"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2439)
+
+
+Started GET "/" for ::1 at 2020-12-04 05:40:02 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms | Allocations: 47595)
+
+
+  
+NoMethodError (undefined method `find_palindromes' for #<XmlController:0x00007fe472cd64d8>):
+  
+app/controllers/xml_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-12-04 05:40:18 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.2ms | Allocations: 67)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 667)
+
+
+Started GET "/" for ::1 at 2020-12-04 05:41:03 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.2ms | Allocations: 73)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 672)
+
+
+Started GET "/?num=2482553&format=rss" for ::1 at 2020-12-04 05:47:14 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as RSS
+  Parameters: {"num"=>"2482553"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2513)
+
+
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:47:20 +0300
+Processing by XmlController#index as RSS
+  Parameters: {"num"=>"200"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 738)
+
+
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:56:53 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:10: syntax error, unexpected tUMINUS_NUM, expecting then or ';' or '\n'
+...x(elem) == palindromes.length -1
+...                              ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting '}'
+step:
+    ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/xml_controller.rb:10: syntax error, unexpected tUMINUS_NUM, expecting then or ';' or '\n'
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:10: syntax error, unexpected tUMINUS_NUM, expecting then or ';' or '\n'
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:10: syntax error, unexpected tUMINUS_NUM, expecting then or ';' or '\n'
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:57:32 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step:
+    ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting '}'
+protected
+^~~~~~~~~
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:47: syntax error, unexpected end, expecting '}'):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end, expecting '}'
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end, expecting '}'
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end, expecting '}'
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:57:58 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step: palindromes.find_index(elem)
+    ^):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:58:21 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:10: syntax error, unexpected do, expecting then or ';' or '\n'
+... == (palindromes.length - 1) do
+...                             ^~
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:12: syntax error, unexpected tLABEL
+end, value: elem } }
+     ^~~~~~):
+  
+app/controllers/xml_controller.rb:10: syntax error, unexpected do, expecting then or ';' or '\n'
+app/controllers/xml_controller.rb:12: syntax error, unexpected tLABEL
+app/controllers/xml_controller.rb:10: syntax error, unexpected do, expecting then or ';' or '\n'
+app/controllers/xml_controller.rb:12: syntax error, unexpected tLABEL
+app/controllers/xml_controller.rb:10: syntax error, unexpected do, expecting then or ';' or '\n'
+app/controllers/xml_controller.rb:12: syntax error, unexpected tLABEL
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:58:32 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step: palindromes.find_index(elem)
+    ^):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+Started POST "/__web_console/repl_sessions/8c7620938cc6d578795834bd243370e3/trace" for ::1 at 2020-12-04 05:59:07 +0300
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:59:07 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step: palindromes.find_index(elem)
+    ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+end, value: elem } }
+   ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:59:17 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step: palindromes.find_index(elem)...
+    ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+...lindromes.find_index(elem) end, value: elem } }
+...                              ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 05:59:52 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step: palindromes.find_index(elem)...
+    ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+...lindromes.find_index(elem) end, value: elem } }
+...                              ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end-of-input, expecting end
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 06:00:00 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step: palindromes.find_index(elem)...
+    ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting end
+...: palindromes.find_index(elem), value: elem } }
+...                              ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:18: syntax error, unexpected '\n', expecting =>
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:46: syntax error, unexpected end, expecting '}'):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting end
+app/controllers/xml_controller.rb:18: syntax error, unexpected '\n', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end, expecting '}'
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting end
+app/controllers/xml_controller.rb:18: syntax error, unexpected '\n', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end, expecting '}'
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ',', expecting end
+app/controllers/xml_controller.rb:18: syntax error, unexpected '\n', expecting =>
+app/controllers/xml_controller.rb:46: syntax error, unexpected end, expecting '}'
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 06:00:36 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+step: palindromes.find_index(elem)
+    ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+end, value: elem } }
+   ^
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:11: syntax error, unexpected ':', expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected ',', expecting =>
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 06:01:18 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:12: syntax error, unexpected end, expecting '}'
+end, value: elem } }
+^~~
+/Users/ingibitr/Documents/Ruby_labs/Lab10_app/app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/xml_controller.rb:12: syntax error, unexpected end, expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected end, expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+app/controllers/xml_controller.rb:12: syntax error, unexpected end, expecting '}'
+app/controllers/xml_controller.rb:47: syntax error, unexpected end-of-input, expecting end
+Started GET "/?num=200&format=rss" for ::1 at 2020-12-04 06:01:25 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as RSS
+  Parameters: {"num"=>"200"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 800)
+
+
+Started GET "/?num=11&format=xml" for ::1 at 2020-12-04 13:49:39 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"num"=>"11"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 650)
+
+
+Started GET "/?num=0&format=xml" for ::1 at 2020-12-04 13:49:49 +0300
+Processing by XmlController#index as XML
+  Parameters: {"num"=>"0"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 443)
+
+
+Started GET "/?num=-5&format=xml" for ::1 at 2020-12-04 13:50:06 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"num"=>"-5"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 504)
+
+
+Started GET "/?num=54&format=xml" for ::1 at 2020-12-04 13:50:11 +0300
+Processing by XmlController#index as XML
+  Parameters: {"num"=>"54"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 755)
+
+

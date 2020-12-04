@@ -1,14 +1,13 @@
 class XmlController < ApplicationController
   before_action :parse_params, only: :index
 def index
-palindromes = find_palindromes(@num)
-#palindromes[0] = 225
+palindromes = calc_palindrome(@num)
 data = if palindromes.nil?
    
 {
     message: "Неверные параметры запроса (number = #{@num})" }
 else
-palindromes.map { |elem| { elem: elem, square: elem**2 } }
+palindromes.map { |elem| { step: palindromes.find_index(elem), value: elem } }
  end
     respond_to do |format|
     format.html { render inline: data.to_s } 
@@ -21,17 +20,26 @@ def parse_params
 @num = params[:num].to_i
 end
 private
-def find_palindromes(num) 
-    if num.positive?
-        (0..num).to_a.select { |elem| palindrome? elem } 
-    else
-    nil
-    end 
-end
+def calc_palindrome(x_param) 
+    if x_param <= 0
+        return nil
+    end
+values = []
+iteration = 0
+values.push(x_param.to_i)
 
-def palindrome?(x)
-    par = (x.to_i)**2
-    par.to_s == par.to_s.reverse
+while x_param.to_s != x_param.to_s.reverse
+  iteration += 1
+  if x_param.to_s != x_param.to_s.reverse
+    rev = x_param.to_s.reverse.to_i
+    x_param = rev + x_param.to_i
+    # print(x, "\n")
+
+  end
+  values.push(x_param)
+end
+result = values
+return result
 end
 
 end
