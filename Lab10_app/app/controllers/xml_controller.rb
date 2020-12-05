@@ -7,7 +7,7 @@ data = if palindromes.nil?
 {
     message: "Неверные параметры запроса (number = #{@num})" }
 else
-palindromes.map { |elem| { step: palindromes.find_index(elem), value: elem } }
+palindromes.map { |elem| { elem: elem } }
  end
     respond_to do |format|
     format.html { render inline: data.to_s } 
