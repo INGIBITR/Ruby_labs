@@ -9071,3 +9071,33 @@ Processing by XmlController#index as XML
 Completed 200 OK in 1ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 541)
 
 
+Started GET "/?format=xml&num=" for ::1 at 2020-12-06 21:52:47 +0300
+Started GET "/?format=xml&num=5" for ::1 at 2020-12-06 21:52:47 +0300
+Started GET "/?format=xml&num=5" for ::1 at 2020-12-06 21:52:47 +0300
+Started GET "/?format=xml&num=5" for ::1 at 2020-12-06 21:52:47 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by XmlController#index as XML
+  Parameters: {"num"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by XmlController#index as XML
+  Parameters: {"num"=>""}
+Completed 200 OK in 1ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1520)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+Processing by XmlController#index as XML
+  Parameters: {"num"=>"5"}
+  Parameters: {"num"=>"5"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 422)
+
+
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 422)
+
+
