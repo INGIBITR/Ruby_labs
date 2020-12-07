@@ -1,0 +1,26 @@
+<style>
+    tr>* {
+        text-align: right;
+    }
+
+    table {
+        border="1"
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Step</th>
+        <th>Result</th>
+    </tr>
+    <% @result.each { |row| %>
+    <tr>
+        <td><%= row[:x] %></td>
+        <td><%= row[:xsqr] %></td>
+    </tr>
+    <% } %>
+    <tr>
+        <td>Count:</td>
+        <td><strong><%= @result.size %></strong></td>
+    </tr>
+</table>
