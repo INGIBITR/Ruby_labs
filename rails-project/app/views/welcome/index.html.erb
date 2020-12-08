@@ -1,8 +1,9 @@
+<%= "Palindrome machine" %>
 <%= form_with id: :form, format: :json, url: welcome_result_path, method: 'get' do |f| %>
 <%= f.label :n, :N %>
 <%= f.number_field :n, required: true, min: 1, value: '5' %>
 
-<%= f.submit 'Посчитать' %>
+<%= f.submit 'Find' %>
 <% end %>
 
 <div id="result"></div>

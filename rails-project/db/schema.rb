@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,14 +12,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_29_200943) do
-
-  create_table "cached_results", force: :cascade do |t|
-    t.integer "n"
-    t.string "result"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["n"], name: "index_cached_results_on_n", unique: true
+ActiveRecord::Schema.define(version: 20_201_129_200_943) do
+  create_table 'cached_results', force: :cascade do |t|
+    t.integer 'n'
+    t.string 'result'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['n'], name: 'index_cached_results_on_n', unique: true
   end
-
 end

@@ -36,7 +36,7 @@ class WelcomeController < ApplicationController
 
   def calc_palindrome(n)
     x_param = n
-    result = ""
+    result = ''
     iteration = 0
     values = []
     iters = []
@@ -53,9 +53,7 @@ class WelcomeController < ApplicationController
       values.push(x_param)
       iters.push(iteration)
     end
-    result = iters.map { |a| { x: iters[a], xsqr: values[a] } }
+    iters.map { |a| { x: iters[a], xsqr: values[a] } }
     # values.push(30)
-
-    return result
   end
 end

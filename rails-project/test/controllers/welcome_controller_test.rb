@@ -33,7 +33,7 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
 
   test "should cache result in db" do
     before = CachedResult.count
-    get welcome_result_url, params: { n: 1234 }
+    get welcome_result_url, params: { n: 1523324 }
     after = CachedResult.count
 
     assert_equal before + 1, after

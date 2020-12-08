@@ -5,7 +5,7 @@ require 'bencode'
 
 class CachedResultTest < ActiveSupport::TestCase
   def gen(x)
-    { x: x, xsqr: x ** 2 }
+    { x: x, xsqr: x**2 }
   end
 
   def before_setup

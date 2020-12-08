@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'application_system_test_case'
 
 class WelcomeAjaxTest < ApplicationSystemTestCase
@@ -18,6 +19,5 @@ class WelcomeAjaxTest < ApplicationSystemTestCase
     assert_text '9'
 
     assert_text 'Count: 4'
-
   end
 end
