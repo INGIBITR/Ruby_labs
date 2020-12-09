@@ -16,8 +16,6 @@ class WelcomeController < ApplicationController
     respond_to do |format|
       format.json { render json: @result }
       format.html { render }
-      format.xml { render xml: @result.to_xml }
-      format.rss { render xml: @result.to_xml }
     end
   end
 
@@ -36,7 +34,7 @@ class WelcomeController < ApplicationController
 
   def calc_palindrome(n)
     x_param = n
-    result = ''
+    result = ""
     iteration = 0
     values = []
     iters = []

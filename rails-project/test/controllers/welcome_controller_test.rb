@@ -24,13 +24,6 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_includes @response.headers["Content-Type"], "application/json"
   end
 
-  test "should return rss" do
-    get welcome_result_url, params: { n: 5, format: "rss" }
-    assert_response :success
-
-    assert_includes @response.headers["Content-Type"], "application/rss"
-  end
-
   test "should cache result in db" do
     before = CachedResult.count
     get welcome_result_url, params: { n: 1523324 }
