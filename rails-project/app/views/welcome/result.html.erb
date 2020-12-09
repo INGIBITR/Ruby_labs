@@ -1,0 +1,21 @@
+<h1>Palndrome machine</h1>
+<style>
+    tr>* {
+        text-align: right;
+    }
+</style>
+
+<table>
+    <tr>
+    </tr>
+    <% @result.each { |row| %>
+    <tr>
+        <td><%= row[:x] %></td>
+        <td><%= row[:xsqr] %></td>
+    </tr>
+    <% } %>
+    <tr>
+        <td>Count:</td>
+        <td><strong><%= @result.size-1 %></strong></td>
+    </tr>
+</table>
