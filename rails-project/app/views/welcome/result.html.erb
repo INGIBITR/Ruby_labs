@@ -1,0 +1,22 @@
+<style>
+    tr>* {
+        text-align: right;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Xee</th>
+        <th>X<sup>2</sup></th>
+    </tr>
+    <% @result.each { |row| %>
+    <tr>
+        <td><%= row[:x] %></td>
+        <td><%= row[:xsqr] %></td>
+    </tr>
+    <% } %>
+    <tr>
+        <td>Count:</td>
+        <td><strong><%= @result.size %></strong></td>
+    </tr>
+</table>
