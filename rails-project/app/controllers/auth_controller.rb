@@ -40,7 +40,11 @@ class AuthController < ApplicationController
 
   def handle_register
     @user = User.new(user_params)
-
+    unless (User.find_by(login: params[:login]).nil?)
+      flash[:notice] = "User with such username has been already registered."
+      redirect_to login_path
+      return
+    end
     respond_to do |format|
       if @user.save
         format.html { redirect_to login_path, notice: "User was successfully registered." }
