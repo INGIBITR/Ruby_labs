@@ -1,6 +1,6 @@
 class Api::V1::ProductsController < ApplicationController
   def index
-    product = Product.all.order(name: :desc)
+    product = Product.all.order(id: :desc)
     render json: product
   end
 
@@ -14,6 +14,13 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def edit
+    @product ||= Product.find(params[:id])
+    @product.update(params[:name])
+    if product
+      render json: product
+    else
+      render json: product.errors
+    end
   end
 
   def show

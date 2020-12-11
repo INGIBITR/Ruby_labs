@@ -6,6 +6,7 @@ class Product extends React.Component {
     constructor(props) {
         super(props);
         this.state = { product: { name: name } };
+        this.deleteProduct = this.deleteProduct.bind(this);
 
         // this.addHtmlEntities = this.addHtmlEntities.bind(this);
     }
@@ -29,9 +30,36 @@ class Product extends React.Component {
             .then(response => this.setState({ product: response }))
             .catch(() => this.props.history.push("/products"));
     }
+
+    deleteProduct() {
+        const {
+            match: {
+                params: { id }
+            }
+        } = this.props;
+        const url = `/api/v1/destroy/${id}`;
+
+        const token = document.querySelector('meta[name="csrf-token"]').content;
+
+        fetch(url, {
+            method: "DELETE",
+            headers: {
+                "X-CSRF-Token": token,
+                "Content-Type": "application/json"
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error("Network response was not ok.");
+            })
+            .then(() => this.props.history.push("/products"))
+            .catch(error => console.log(error.message));
+    }
     render() {
         const { product } = this.state;
-
+        const editURL = `/editProduct/${product.id}`;
 
 
 
@@ -42,6 +70,11 @@ class Product extends React.Component {
                     <h1 className="display-4 position-relative text-white">
                         {product.name}
                     </h1>
+                </div>
+                <div className="text-right mb-3">
+                    <Link to={editURL} className="btn custom-button">
+                        Edit Product
+              </Link>
                 </div>
                 <div className="container py-5">
                     <div className="row">
@@ -60,16 +93,16 @@ class Product extends React.Component {
                             />
                         </div>
                         <div className="col-sm-12 col-lg-2">
-                            <button type="button" className="btn btn-danger">
+                            <button type="button" className="btn btn-danger" onClick={this.deleteProduct}>
                                 Delete product
               </button>
                         </div>
                     </div>
-                    <Link to="/recipes" className="btn btn-link">
+                    <Link to="/products" className="btn btn-link">
                         Back to list
           </Link>
                 </div>
-            </div>
+            </div >
         );
     }
 
