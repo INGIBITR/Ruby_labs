@@ -11594,3 +11594,2012 @@ Processing by HomepageController#index as HTML
 Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6281)
 
 
+Started GET "/auth/login" for ::1 at 2020-12-11 18:14:24 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"auth/login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 190)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: d32e72e07e7dd284a6a8
+Version: webpack 4.44.2
+Time: 3872ms
+Built at: 11.12.2020 18:14:31
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-df55b0f4dbc699764393.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-df55b0f4dbc699764393.js.map   2.97 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-df55b0f4dbc699764393.js js/Index-df55b0f4dbc699764393.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/Login.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components/Login.jsx: Identifier 'login' has already been declared (39:16)
+
+  37 |             }
+  38 |         } = this.props;
+> 39 |         const { login,
+     |                 ^
+  40 |             password } = this.state;
+  41 |         const body = {
+  42 |             login,
+    at Object._raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:735:17)
+    at ScopeHandler.checkRedeclarationInScope (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4919:12)
+    at ScopeHandler.declareName (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4885:12)
+    at Object.checkLVal (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9590:24)
+    at Object.checkLVal (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9607:16)
+    at Object.parseVarId (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12364:10)
+    at Object.parseVar (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12339:12)
+    at Object.parseVarStatement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12151:10)
+    at Object.parseStatementContent (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11743:21)
+    at Object.parseStatement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11676:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12258:25)
+    at Object.parseBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12244:10)
+    at Object.parseBlock (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12228:10)
+    at Object.parseFunctionBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11221:24)
+    at Object.parseFunctionBodyAndFinish (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11205:10)
+    at Object.parseMethod (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11155:10)
+    at Object.pushClassMethod (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12704:30)
+    at Object.parseClassMemberWithIsStatic (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12593:12)
+    at Object.parseClassMember (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12535:10)
+    at /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12480:14
+    at Object.withTopicForbiddingContext (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11516:14)
+    at Object.parseClassBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12457:10)
+    at Object.parseClass (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12430:22)
+    at Object.parseStatementContent (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11718:21)
+    at Object.parseStatement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11676:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12258:25)
+    at Object.parseBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12244:10)
+    at Object.parseTopLevel (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11607:10)
+ @ ./app/javascript/routes/Index.jsx 9:0-40 78:13-18
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7146ms (Views: 7134.1ms | ActiveRecord: 0.0ms | Allocations: 12365)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:14:35 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 6318)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:14:40 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 6314)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:14:48 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 6309)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:18:51 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 80de643f374964198bc3
+Version: webpack 4.44.2
+Time: 4452ms
+Built at: 11.12.2020 18:18:57
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-607f7bc49fe74aa3002d.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-607f7bc49fe74aa3002d.js.map   2.97 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-607f7bc49fe74aa3002d.js js/Index-607f7bc49fe74aa3002d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/Login.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components/Login.jsx: Identifier 'login' has already been declared (34:16)
+
+  32 |             }
+  33 |         } = this.props;
+> 34 |         const { login,
+     |                 ^
+  35 |             password } = this.state;
+  36 |         const body = {
+  37 |             login,
+    at Object._raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:735:17)
+    at ScopeHandler.checkRedeclarationInScope (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4919:12)
+    at ScopeHandler.declareName (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4885:12)
+    at Object.checkLVal (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9590:24)
+    at Object.checkLVal (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9607:16)
+    at Object.parseVarId (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12364:10)
+    at Object.parseVar (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12339:12)
+    at Object.parseVarStatement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12151:10)
+    at Object.parseStatementContent (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11743:21)
+    at Object.parseStatement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11676:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12258:25)
+    at Object.parseBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12244:10)
+    at Object.parseBlock (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12228:10)
+    at Object.parseFunctionBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11221:24)
+    at Object.parseFunctionBodyAndFinish (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11205:10)
+    at Object.parseMethod (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11155:10)
+    at Object.pushClassMethod (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12704:30)
+    at Object.parseClassMemberWithIsStatic (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12593:12)
+    at Object.parseClassMember (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12535:10)
+    at /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12480:14
+    at Object.withTopicForbiddingContext (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11516:14)
+    at Object.parseClassBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12457:10)
+    at Object.parseClass (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12430:22)
+    at Object.parseStatementContent (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11718:21)
+    at Object.parseStatement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11676:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12258:25)
+    at Object.parseBlockBody (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:12244:10)
+    at Object.parseTopLevel (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11607:10)
+ @ ./app/javascript/routes/Index.jsx 9:0-40 78:13-18
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6758ms (Views: 6739.8ms | ActiveRecord: 0.0ms | Allocations: 7495)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:46:14 +0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 190)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 1fe27ed2e1a3d42e711e
+Version: webpack 4.44.2
+Time: 3237ms
+Built at: 11.12.2020 18:46:19
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-74e15d9e1713dbb47131.js   2.47 MiB        Index  [emitted] [immutable]  Index
+      js/Index-74e15d9e1713dbb47131.js.map   2.75 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-74e15d9e1713dbb47131.js js/Index-74e15d9e1713dbb47131.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 20 hidden modules
+
+ERROR in ./app/javascript/components/App.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components/App.jsx: JSX attributes must only be assigned a non-empty expression (45:56)
+
+  43 |                 <BrowserRouter>
+  44 |                     <Switch>
+> 45 |                         <Route exact path='/' component={ } />
+     |                                                         ^
+  46 |                         <Route exact path='/login' component={ } />
+  47 |                         <Route exact path='/signup' component={ } />
+  48 |                     </Switch>
+    at Object._raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:735:17)
+    at Object.jsxParseAttributeValue (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4583:16)
+    at Object.jsxParseAttribute (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4632:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4652:28)
+    at Object.jsxParseOpeningElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4645:17)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4677:33)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4751:17)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4758:19)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9926:21)
+    at /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:39
+    at Object.allowInAnd (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11547:12)
+    at Object.parseMaybeAssignAllowIn (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:17)
+    at Object.parseParenAndDistinguishExpression (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10752:28)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10470:21)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4763:20)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+ @ ./app/javascript/packs/Index.jsx 10:0-36 12:43-46
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5090ms (Views: 5080.5ms | ActiveRecord: 0.0ms | Allocations: 11780)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:46:56 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 40567631d5967f7f760d
+Version: webpack 4.44.2
+Time: 2738ms
+Built at: 11.12.2020 18:47:00
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-021b52a4e6ef89a44812.js   2.47 MiB        Index  [emitted] [immutable]  Index
+      js/Index-021b52a4e6ef89a44812.js.map   2.75 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-021b52a4e6ef89a44812.js js/Index-021b52a4e6ef89a44812.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 20 hidden modules
+
+ERROR in ./app/javascript/components/App.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components/App.jsx: JSX attributes must only be assigned a non-empty expression (46:61)
+
+  44 |                     <Switch>
+  45 |                         <Route exact path='/' />
+> 46 |                         <Route exact path='/login' component={ } />
+     |                                                              ^
+  47 |                         <Route exact path='/signup' component={ } />
+  48 |                     </Switch>
+  49 |                 </BrowserRouter>
+    at Object._raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:735:17)
+    at Object.jsxParseAttributeValue (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4583:16)
+    at Object.jsxParseAttribute (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4632:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4652:28)
+    at Object.jsxParseOpeningElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4645:17)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4677:33)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4751:17)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4758:19)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9926:21)
+    at /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:39
+    at Object.allowInAnd (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11547:12)
+    at Object.parseMaybeAssignAllowIn (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:17)
+    at Object.parseParenAndDistinguishExpression (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10752:28)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10470:21)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4763:20)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+ @ ./app/javascript/packs/Index.jsx 10:0-36 12:43-46
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4155ms (Views: 4153.9ms | ActiveRecord: 0.0ms | Allocations: 7521)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:47:13 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 0efdf74921cdaac42998
+Version: webpack 4.44.2
+Time: 3601ms
+Built at: 11.12.2020 18:47:18
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-22b62ca726e1117db24b.js   2.67 MiB        Index  [emitted] [immutable]  Index
+      js/Index-22b62ca726e1117db24b.js.map   2.95 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-22b62ca726e1117db24b.js js/Index-22b62ca726e1117db24b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 67 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5099ms (Views: 5076.4ms | ActiveRecord: 0.0ms | Allocations: 7624)
+
+
+Started GET "/" for ::1 at 2020-12-11 18:47:52 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 6345)
+
+
+Started GET "/index" for ::1 at 2020-12-11 18:50:17 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"index"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6363)
+
+
+Started GET "/login" for ::1 at 2020-12-11 18:50:58 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 6360)
+
+
+Started GET "/login" for ::1 at 2020-12-11 18:51:39 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: dd1b12e4c218cf70f2a5
+Version: webpack 4.44.2
+Time: 3536ms
+Built at: 11.12.2020 18:51:44
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-89759b116e74a9f720b4.js   2.67 MiB        Index  [emitted] [immutable]  Index
+      js/Index-89759b116e74a9f720b4.js.map   2.95 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-89759b116e74a9f720b4.js js/Index-89759b116e74a9f720b4.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 67 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5068ms (Views: 5067.0ms | ActiveRecord: 0.0ms | Allocations: 7603)
+
+
+Started GET "/login" for ::1 at 2020-12-11 18:52:16 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 8b377e77b2fbac0307fa
+Version: webpack 4.44.2
+Time: 3823ms
+Built at: 11.12.2020 18:52:22
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-fe047eab08e1018927b0.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-fe047eab08e1018927b0.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-fe047eab08e1018927b0.js js/Index-fe047eab08e1018927b0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5208ms (Views: 5207.1ms | ActiveRecord: 0.0ms | Allocations: 7604)
+
+
+Started GET "/login" for ::1 at 2020-12-11 18:52:52 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 4ab7cd07a9b8581013e3
+Version: webpack 4.44.2
+Time: 4193ms
+Built at: 11.12.2020 18:52:58
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-3a4b47e7d62a530dceec.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-3a4b47e7d62a530dceec.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-3a4b47e7d62a530dceec.js js/Index-3a4b47e7d62a530dceec.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5862ms (Views: 5861.0ms | ActiveRecord: 0.0ms | Allocations: 7613)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:54:10 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 9ef39f24b9da29467f5b
+Version: webpack 4.44.2
+Time: 3511ms
+Built at: 11.12.2020 18:54:15
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-01c1dc6cd6495b9cb653.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-01c1dc6cd6495b9cb653.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-01c1dc6cd6495b9cb653.js js/Index-01c1dc6cd6495b9cb653.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4955ms (Views: 4954.1ms | ActiveRecord: 0.0ms | Allocations: 7611)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:55:55 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: ef470aa905e5e09a5791
+Version: webpack 4.44.2
+Time: 4782ms
+Built at: 11.12.2020 18:56:01
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-eed1b90b0c8244a7d8a3.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-eed1b90b0c8244a7d8a3.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-eed1b90b0c8244a7d8a3.js js/Index-eed1b90b0c8244a7d8a3.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6348ms (Views: 6347.8ms | ActiveRecord: 0.0ms | Allocations: 7611)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:56:25 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: b9dbfe81e71be704a781
+Version: webpack 4.44.2
+Time: 3914ms
+Built at: 11.12.2020 18:56:31
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-f16ea7b3dd794f313ebd.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-f16ea7b3dd794f313ebd.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-f16ea7b3dd794f313ebd.js js/Index-f16ea7b3dd794f313ebd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5447ms (Views: 5445.7ms | ActiveRecord: 0.0ms | Allocations: 7617)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:56:37 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: e260b7c9d89c34ad0220
+Version: webpack 4.44.2
+Time: 3802ms
+Built at: 11.12.2020 18:56:43
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-06af0bd2ab7ae7eca6e8.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-06af0bd2ab7ae7eca6e8.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-06af0bd2ab7ae7eca6e8.js js/Index-06af0bd2ab7ae7eca6e8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5439ms (Views: 5437.8ms | ActiveRecord: 0.0ms | Allocations: 7609)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:56:52 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 6349)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:57:05 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 948e236631e354e5cd48
+Version: webpack 4.44.2
+Time: 4182ms
+Built at: 11.12.2020 18:57:11
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-b1ee5067a9cd3e5c5039.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-b1ee5067a9cd3e5c5039.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-b1ee5067a9cd3e5c5039.js js/Index-b1ee5067a9cd3e5c5039.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5705ms (Views: 5704.4ms | ActiveRecord: 0.0ms | Allocations: 7611)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:58:00 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 94074a4413c857e477c8
+Version: webpack 4.44.2
+Time: 3754ms
+Built at: 11.12.2020 18:58:05
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-f8bbffcd0cd20b810107.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-f8bbffcd0cd20b810107.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-f8bbffcd0cd20b810107.js js/Index-f8bbffcd0cd20b810107.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5236ms (Views: 5235.4ms | ActiveRecord: 0.0ms | Allocations: 7609)
+
+
+Started GET "/login" for ::1 at 2020-12-11 18:58:07 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms | Allocations: 6353)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 18:58:11 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 6353)
+
+
+Started GET "/login" for ::1 at 2020-12-11 18:58:14 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 6348)
+
+
+Started GET "/login" for ::1 at 2020-12-11 18:59:06 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 20f0cc19e5b9e9ef8c0c
+Version: webpack 4.44.2
+Time: 3969ms
+Built at: 11.12.2020 18:59:12
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-1e78aae54254a1eb7a7c.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-1e78aae54254a1eb7a7c.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-1e78aae54254a1eb7a7c.js js/Index-1e78aae54254a1eb7a7c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5395ms (Views: 5394.6ms | ActiveRecord: 0.0ms | Allocations: 7610)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 19:01:53 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 2.0ms | ActiveRecord: 1.3ms | Allocations: 2153)
+
+
+Started GET "/product" for ::1 at 2020-12-11 19:02:22 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 6352)
+
+
+Started GET "/product" for ::1 at 2020-12-11 19:06:09 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 05da3cde29f16b3ee1e1
+Version: webpack 4.44.2
+Time: 3566ms
+Built at: 11.12.2020 19:06:14
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-91f3aff3313597eea49d.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-91f3aff3313597eea49d.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-91f3aff3313597eea49d.js js/Index-91f3aff3313597eea49d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5207ms (Views: 5206.5ms | ActiveRecord: 0.0ms | Allocations: 7451)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 19:09:18 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1024)
+
+
+Started GET "/login" for ::1 at 2020-12-11 19:14:45 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 6299)
+
+
+Started GET "/login" for ::1 at 2020-12-11 19:16:37 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 6185)
+
+
+Started GET "/login" for ::1 at 2020-12-11 19:21:56 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: c04cee8a7b2e1fbabc0b
+Version: webpack 4.44.2
+Time: 4950ms
+Built at: 11.12.2020 19:22:03
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-921e717d0a1be5c633c7.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-921e717d0a1be5c633c7.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-921e717d0a1be5c633c7.js js/Index-921e717d0a1be5c633c7.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/Login.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components/Login.jsx: JSX attributes must only be assigned a non-empty expression (83:71)
+
+  81 |                         onChange={this.handleChange}
+  82 |                     />
+> 83 |                     <button placeholder="submit" type="submit" onClick={ }>
+     |                                                                        ^
+  84 |                         Log In
+  85 |           </button>
+  86 |                     <div>
+    at Object._raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:735:17)
+    at Object.jsxParseAttributeValue (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4583:16)
+    at Object.jsxParseAttribute (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4632:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4652:28)
+    at Object.jsxParseOpeningElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4645:17)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4677:33)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4751:17)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4758:19)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9926:21)
+    at /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:39
+    at Object.allowInAnd (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11547:12)
+    at Object.parseMaybeAssignAllowIn (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:17)
+    at Object.parseParenAndDistinguishExpression (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10752:28)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10470:21)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4763:20)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9926:21)
+ @ ./app/javascript/routes/Index.jsx 9:0-40 78:13-18
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7810ms (Views: 7809.3ms | ActiveRecord: 0.0ms | Allocations: 7371)
+
+
+Started GET "/login" for ::1 at 2020-12-11 19:23:35 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: b1796846503fa564dfef
+Version: webpack 4.44.2
+Time: 3880ms
+Built at: 11.12.2020 19:23:41
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-983a202e3251895d3d4d.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-983a202e3251895d3d4d.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-983a202e3251895d3d4d.js js/Index-983a202e3251895d3d4d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5473ms (Views: 5472.2ms | ActiveRecord: 0.0ms | Allocations: 7527)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 19:29:12 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 6300)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 19:32:19 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: cd2b60aa44b96f609fd2
+Version: webpack 4.44.2
+Time: 3831ms
+Built at: 11.12.2020 19:32:25
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-926df16e28353f9b7075.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-926df16e28353f9b7075.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-926df16e28353f9b7075.js js/Index-926df16e28353f9b7075.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5430ms (Views: 5429.1ms | ActiveRecord: 0.0ms | Allocations: 7558)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 19:34:16 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 6300)
+
+
+Started GET "/login" for ::1 at 2020-12-11 19:53:28 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-12-11 19:53:31 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 29673538818d7d0de336
+Version: webpack 4.44.2
+Time: 4114ms
+Built at: 11.12.2020 19:53:34
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-03c10fa927aaef56d5a9.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-03c10fa927aaef56d5a9.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-03c10fa927aaef56d5a9.js js/Index-03c10fa927aaef56d5a9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6252ms (Views: 6251.3ms | ActiveRecord: 0.0ms | Allocations: 13458)
+
+
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 29673538818d7d0de336
+Version: webpack 4.44.2
+Time: 3497ms
+Built at: 11.12.2020 19:53:35
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-03c10fa927aaef56d5a9.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-03c10fa927aaef56d5a9.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-03c10fa927aaef56d5a9.js js/Index-03c10fa927aaef56d5a9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5016ms (Views: 5014.9ms | ActiveRecord: 0.0ms | Allocations: 11582)
+
+
+Started GET "/" for ::1 at 2020-12-11 19:54:23 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 84a9e774cefd519cbcae
+Version: webpack 4.44.2
+Time: 3769ms
+Built at: 11.12.2020 19:54:29
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-8516f10b40074cb07270.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-8516f10b40074cb07270.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-8516f10b40074cb07270.js js/Index-8516f10b40074cb07270.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5241ms (Views: 5240.3ms | ActiveRecord: 0.0ms | Allocations: 7559)
+
+
+Started GET "/" for ::1 at 2020-12-11 19:55:55 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 0eeb88bce53a6474b926
+Version: webpack 4.44.2
+Time: 5325ms
+Built at: 11.12.2020 19:56:03
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-f2ea9220957cb7f016df.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-f2ea9220957cb7f016df.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-f2ea9220957cb7f016df.js js/Index-f2ea9220957cb7f016df.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7569ms (Views: 7568.1ms | ActiveRecord: 0.0ms | Allocations: 7566)
+
+
+Started GET "/" for ::1 at 2020-12-11 19:56:51 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 2be2751cd8d8c09eaaee
+Version: webpack 4.44.2
+Time: 3682ms
+Built at: 11.12.2020 19:56:56
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-26fad5f0dee4735c2e2d.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-26fad5f0dee4735c2e2d.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-26fad5f0dee4735c2e2d.js js/Index-26fad5f0dee4735c2e2d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5768ms (Views: 5767.2ms | ActiveRecord: 0.0ms | Allocations: 7559)
+
+
+Started GET "/" for ::1 at 2020-12-11 19:58:34 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: c7e75ae23c497db5b6c3
+Version: webpack 4.44.2
+Time: 4661ms
+Built at: 11.12.2020 19:58:41
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-827ba2de3cd6be49f834.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-827ba2de3cd6be49f834.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-827ba2de3cd6be49f834.js js/Index-827ba2de3cd6be49f834.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7131ms (Views: 7130.0ms | ActiveRecord: 0.0ms | Allocations: 7562)
+
+
+Started GET "/" for ::1 at 2020-12-11 19:58:49 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 0751448e9a58b101584c
+Version: webpack 4.44.2
+Time: 3966ms
+Built at: 11.12.2020 19:58:56
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-718013b1eaa860bc1318.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-718013b1eaa860bc1318.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-718013b1eaa860bc1318.js js/Index-718013b1eaa860bc1318.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6582ms (Views: 6580.4ms | ActiveRecord: 0.0ms | Allocations: 7559)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:01:53 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 0bb759d04def88ec2fc7
+Version: webpack 4.44.2
+Time: 4331ms
+Built at: 11.12.2020 20:02:00
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-9b03b48d0625eab1227a.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-9b03b48d0625eab1227a.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-9b03b48d0625eab1227a.js js/Index-9b03b48d0625eab1227a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6575ms (Views: 6574.6ms | ActiveRecord: 0.0ms | Allocations: 7562)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:04:04 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 81aced5cbba8e2335836
+Version: webpack 4.44.2
+Time: 3718ms
+Built at: 11.12.2020 20:04:10
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-25c67064c3afa769d73f.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-25c67064c3afa769d73f.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-25c67064c3afa769d73f.js js/Index-25c67064c3afa769d73f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6060ms (Views: 6056.5ms | ActiveRecord: 0.0ms | Allocations: 7563)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:05:06 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: aa5d925d34c5bc6d3bc1
+Version: webpack 4.44.2
+Time: 3932ms
+Built at: 11.12.2020 20:05:12
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-eff21588a9b1f284cea8.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-eff21588a9b1f284cea8.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-eff21588a9b1f284cea8.js js/Index-eff21588a9b1f284cea8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5695ms (Views: 5694.5ms | ActiveRecord: 0.0ms | Allocations: 7558)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:08:35 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: f886aec23dd9823097fb
+Version: webpack 4.44.2
+Time: 3939ms
+Built at: 11.12.2020 20:08:41
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-a02bf00c2ac083b82a14.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-a02bf00c2ac083b82a14.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-a02bf00c2ac083b82a14.js js/Index-a02bf00c2ac083b82a14.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/Login.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components/Login.jsx: Expected corresponding JSX closing tag for <div> (115:16)
+
+  113 |                         </div>
+  114 | 
+> 115 |                 </form>
+      |                 ^
+  116 |             </div>
+  117 |         );
+  118 |     }
+    at Object._raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:735:17)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4725:16)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElementAt (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElement (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4751:17)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4758:19)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9926:21)
+    at /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:39
+    at Object.allowInAnd (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11547:12)
+    at Object.parseMaybeAssignAllowIn (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9893:17)
+    at Object.parseParenAndDistinguishExpression (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10752:28)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10470:21)
+    at Object.parseExprAtom (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:4763:20)
+    at Object.parseExprSubscripts (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9926:21)
+    at Object.parseExpressionBase (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9871:23)
+    at /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9865:39
+    at Object.allowInAnd (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:11541:16)
+    at Object.parseExpression (/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/node_modules/@babel/parser/lib/index.js:9865:17)
+ @ ./app/javascript/routes/Index.jsx 9:0-40 78:13-18
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5974ms (Views: 5973.4ms | ActiveRecord: 0.0ms | Allocations: 7478)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:10:25 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 74f05da7025adc53d38f
+Version: webpack 4.44.2
+Time: 4661ms
+Built at: 11.12.2020 20:10:31
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-c243eeae697f5443f544.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-c243eeae697f5443f544.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-c243eeae697f5443f544.js js/Index-c243eeae697f5443f544.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6513ms (Views: 6511.7ms | ActiveRecord: 0.0ms | Allocations: 7561)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:10:36 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 6291)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:10:39 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 6293)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:10:53 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 7c64908d03662881fdec
+Version: webpack 4.44.2
+Time: 3639ms
+Built at: 11.12.2020 20:10:58
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-64055bd3d79344ec70a0.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-64055bd3d79344ec70a0.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-64055bd3d79344ec70a0.js js/Index-64055bd3d79344ec70a0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5168ms (Views: 5167.1ms | ActiveRecord: 0.0ms | Allocations: 7560)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:11:03 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 6296)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:11:20 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 37129face0997db2299f
+Version: webpack 4.44.2
+Time: 3421ms
+Built at: 11.12.2020 20:11:25
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-88ce358ba182219f83b3.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-88ce358ba182219f83b3.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-88ce358ba182219f83b3.js js/Index-88ce358ba182219f83b3.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4884ms (Views: 4883.3ms | ActiveRecord: 0.0ms | Allocations: 7564)
+
+
+Started GET "/products" for ::1 at 2020-12-11 20:12:09 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 6296)
+
+
+Started GET "/products" for ::1 at 2020-12-11 20:12:22 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 1284522fa5692652b3cd
+Version: webpack 4.44.2
+Time: 3382ms
+Built at: 11.12.2020 20:12:27
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-620cbf4c7fb4cb7733cb.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-620cbf4c7fb4cb7733cb.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-620cbf4c7fb4cb7733cb.js js/Index-620cbf4c7fb4cb7733cb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4903ms (Views: 4900.4ms | ActiveRecord: 0.0ms | Allocations: 7566)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:12:28 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1082)
+
+
+Started GET "/products" for ::1 at 2020-12-11 20:12:48 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 12f3cc30195e03e062a5
+Version: webpack 4.44.2
+Time: 4893ms
+Built at: 11.12.2020 20:12:55
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-8876c13ac544f73c6f63.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-8876c13ac544f73c6f63.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-8876c13ac544f73c6f63.js js/Index-8876c13ac544f73c6f63.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6310ms (Views: 6309.1ms | ActiveRecord: 0.0ms | Allocations: 7575)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:12:55 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1077)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:13:05 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 6302)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:13:31 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 72124658812dd07483eb
+Version: webpack 4.44.2
+Time: 3625ms
+Built at: 11.12.2020 20:13:37
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-60f4b1e26bb14fc178c0.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-60f4b1e26bb14fc178c0.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-60f4b1e26bb14fc178c0.js js/Index-60f4b1e26bb14fc178c0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5494ms (Views: 5493.5ms | ActiveRecord: 0.0ms | Allocations: 7562)
+
+
+Started GET "/" for ::1 at 2020-12-11 20:19:21 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: d63ef3861f50f3520577
+Version: webpack 4.44.2
+Time: 5407ms
+Built at: 11.12.2020 20:19:29
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-84ff7b586c24a8588ef3.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-84ff7b586c24a8588ef3.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-84ff7b586c24a8588ef3.js js/Index-84ff7b586c24a8588ef3.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8045ms (Views: 8043.9ms | ActiveRecord: 0.0ms | Allocations: 7572)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:19:39 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 1081)
+
+
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 20:19:54 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"pomidor", "price"=>"123", "amount"=>"12", "product"=>{"name"=>"pomidor", "price"=>"123", "amount"=>"12"}}
+[31mUnpermitted parameter: :product[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "pomidor"], ["price", 123], ["amount", 12], ["created_at", "2020-12-11 17:19:54.417792"], ["updated_at", "2020-12-11 17:19:54.417792"]]
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 3.7ms | Allocations: 6945)
+
+
+Started GET "/api/v1/show/1" for ::1 at 2020-12-11 20:19:54 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1390)
+
+
+Started POST "/api/v1/edit/1" for ::1 at 2020-12-11 20:20:12 +0300
+Started GET "/api/v1/edit/1" for ::1 at 2020-12-11 20:20:12 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"ogurec", "price"=>"200", "amount"=>"40", "id"=>"1", "product"=>{"name"=>"ogurec", "price"=>"200", "amount"=>"40"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomepageController#index as */*
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Parameters: {"path"=>"api/v1/edit/1"}
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (1.0ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "ogurec"], ["updated_at", "2020-12-11 17:20:12.878398"], ["id", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering homepage/index.html.erb within layouts/application
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.9ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 200], ["updated_at", "2020-12-11 17:20:12.903802"], ["id", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["amount", 40], ["updated_at", "2020-12-11 17:20:12.913145"], ["id", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+Completed 200 OK in 47ms (Views: 0.4ms | ActiveRecord: 7.4ms | Allocations: 9713)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 0.0ms | Allocations: 12870)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:20:12 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1211)
+
+
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 20:20:21 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"a", "price"=>"11", "amount"=>"1", "product"=>{"name"=>"a", "price"=>"11", "amount"=>"1"}}
+[31mUnpermitted parameter: :product[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "a"], ["price", 11], ["amount", 1], ["created_at", "2020-12-11 17:20:21.363570"], ["updated_at", "2020-12-11 17:20:21.363570"]]
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 2782)
+
+
+Started GET "/api/v1/show/2" for ::1 at 2020-12-11 20:20:21 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 979)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:20:23 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1338)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:27:28 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1363)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:27:30 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1335)
+
+
+Started GET "/api/v1/show/2" for ::1 at 2020-12-11 20:27:31 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 986)
+
+
+Started GET "/api/v1/edit/2" for ::1 at 2020-12-11 20:27:40 +0300
+Started POST "/api/v1/edit/2" for ::1 at 2020-12-11 20:27:40 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/2"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"asd", "price"=>"111", "amount"=>"11", "id"=>"2", "product"=>{"name"=>"asd", "price"=>"111", "amount"=>"11"}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.7ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "asd"], ["updated_at", "2020-12-11 17:27:40.545447"], ["id", 2]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.8ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 111], ["updated_at", "2020-12-11 17:27:40.560378"], ["id", 2]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[36mProduct Update (0.4ms)[0m  [1m[33mUPDATE "products" SET "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["amount", 11], ["updated_at", "2020-12-11 17:27:40.569366"], ["id", 2]]
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+Completed 200 OK in 35ms (Views: 0.4ms | ActiveRecord: 10.4ms | Allocations: 9812)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:27:40 +0300
+Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.0ms | Allocations: 16858)
+
+
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 1481)
+
+
+Started GET "/products" for ::1 at 2020-12-11 20:28:36 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 6420)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:28:37 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.4ms | Allocations: 5985)
+
+
+Started GET "/api/v1/show/2" for ::1 at 2020-12-11 20:28:39 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1085)
+
+
+Started GET "/api/v1/edit/2" for ::1 at 2020-12-11 20:28:48 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/2"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Started POST "/api/v1/edit/2" for ::1 at 2020-12-11 20:28:48 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"qwer", "price"=>"234", "amount"=>"111", "id"=>"2", "product"=>{"name"=>"qwer", "price"=>"234", "amount"=>"111"}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.9ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "price" = ?, "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "qwer"], ["price", 234], ["amount", 111], ["updated_at", "2020-12-11 17:28:48.039217"], ["id", 2]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+Completed 200 OK in 19ms (Views: 1.9ms | ActiveRecord: 3.2ms | Allocations: 3464)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.0ms | Allocations: 12769)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:28:48 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 2252)
+
+
+Started GET "/products" for ::1 at 2020-12-11 20:31:51 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 6417)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:31:52 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 2.1ms | Allocations: 5965)
+
+
+Started GET "/api/v1/show/2" for ::1 at 2020-12-11 20:31:55 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1086)
+
+
+Started GET "/api/v1/edit/2" for ::1 at 2020-12-11 20:32:00 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/2"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Started POST "/api/v1/edit/2" for ::1 at 2020-12-11 20:32:00 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"22", "price"=>"22", "amount"=>"22", "id"=>"2", "product"=>{"name"=>"22", "price"=>"22", "amount"=>"22"}}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms | Allocations: 2819)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'={:id=>22}):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 228ms (Views: 227.1ms | ActiveRecord: 0.0ms | Allocations: 154190)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:32:01 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/products" for ::1 at 2020-12-11 20:32:27 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms | Allocations: 6440)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:32:28 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.8ms | Allocations: 6049)
+
+
+Started GET "/api/v1/show/2" for ::1 at 2020-12-11 20:32:29 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1095)
+
+
+Started POST "/api/v1/edit/2" for ::1 at 2020-12-11 20:32:36 +0300
+Started GET "/api/v1/edit/2" for ::1 at 2020-12-11 20:32:36 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"ewd", "price"=>"11", "amount"=>"11", "id"=>"2", "product"=>{"name"=>"ewd", "price"=>"11", "amount"=>"11"}}
+Processing by HomepageController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Parameters: {"path"=>"api/v1/edit/2"}
+  Rendering homepage/index.html.erb within layouts/application
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.2ms | Allocations: 2577)
+
+
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'={:id=>"22"}):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 201ms (Views: 199.6ms | ActiveRecord: 0.0ms | Allocations: 163897)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:32:36 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1340)
+
+
+Started GET "/products" for ::1 at 2020-12-11 20:32:52 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 6466)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 20:32:53 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 14.5ms | ActiveRecord: 1.5ms | Allocations: 5983)
+
+

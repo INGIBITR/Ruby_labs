@@ -14,10 +14,10 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def edit
-    @product ||= Product.find(params[:id])
-    @product.update(name: params[:name])
-    @product.update(price: params[:price])
-    @product.update(amount: params[:amount])
+    @product ||= Product.find("22")
+    @product.update(name: params[:name], price: params[:price], amount: params[:amount])
+    #@product.update(price: params[:price])
+    # @product.update(amount: params[:amount])
     if product
       render json: product
     else

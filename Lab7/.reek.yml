@@ -1,0 +1,19 @@
+detectors:
+    DuplicateMethodCall:
+        enabled: false
+    InstanceVariableAssumption:
+        enabled: false
+    Attribute:
+        enabled: false
+    IrresponsibleModule:
+        enabled: false
+    NestedIterators:
+        enabled: false
+    UncommunicativeModuleName:
+        enabled: false
+    TooManyStatements:
+        enabled: false
+    UncommunicativeVariableName:
+        enabled: false
+    TooManyInstanceVariables:
+        enabled: false

@@ -37,7 +37,7 @@ class Products extends React.Component {
         const noProduct = (
             <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
                 <h4>
-                    No products yet. Why not <Link to="/new_product">add one</Link>
+                    No products yet. Why not <Link to="/product">add one?</Link>
                 </h4>
             </div>
         );

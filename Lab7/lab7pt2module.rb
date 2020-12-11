@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
+# module for ???
 module Strings
+  # BEBRA
   class Rectangle
     attr_accessor :name, :age
 
@@ -16,6 +20,7 @@ module Strings
     end
   end
 
+  # HMMMMMMM class
   class Parallelepiped < Rectangle
     def initialize(length, width, height)
       super(length, width)

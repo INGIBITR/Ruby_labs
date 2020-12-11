@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# module for Lab7
 module Lab7pt1
   def self.output(filename)
     begin
@@ -7,13 +10,14 @@ module Lab7pt1
       return 'Error reading file'
     end
 
-    textDataArray = config.split("\n")
+    text_data_array = config.split("\n")
 
-    (0.  textDataArray.count - 1).each do |checker|
-      tempstring =  textDataArray[checker]
+    (0.text_data_array.count - 1).each do |checker|
+      tempstring = text_data_array[checker]
       puts("\n")
 
-      if tempstring[0] == '1'
+      case tempstring[0]
+      when '1'
         tempstring = tempstring[2..tempstring.length]
         # puts "modified string #{tempstring}"
         coords = tempstring.split
@@ -35,7 +39,7 @@ module Lab7pt1
        #{Math.sqrt(((coords[2].to_f - coords[0].to_f)**2) +
                    ((coords[3].to_f - coords[1].to_f)**2))}
                    #{coords[4]} "
-      elsif tempstring[0] == '2'
+      when '2'
         tempstring = tempstring[2..tempstring.length]
         coords = tempstring.split
         begin

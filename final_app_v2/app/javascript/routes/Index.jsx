@@ -19,4 +19,5 @@ export default (
             <Route path="/signup" exact component={Signup} />
         </Switch>
     </Router>
+
 );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import App from "./App";
 
 
 export default () => (
@@ -10,6 +11,7 @@ export default () => (
                 <p className="lead">
                     A curated list of recipes for the best homemade meal and delicacies.
         </p>
+                <p className="my-4"> </p>
                 <hr className="my-4" />
                 <Link
                     to="/products"

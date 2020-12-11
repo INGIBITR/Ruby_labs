@@ -1,83 +1,77 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Signup from "../components/Signup";
+import axios from 'axios'
+import { Link } from 'react-router-dom'
+import App from "../components/App";
 class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            login: this.login,
-            password: this.password,
+            username: '',
+            email: '',
+            password: '',
+            errors: ''
         };
-
-        this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
     }
-    state = {
-        login: '',
-        password: '',
-        errors: ''
-    }
-
     handleChange = (event) => {
         const { name, value } = event.target
-
         this.setState({
             [name]: value
         })
-
     };
+    handleSubmit = (event) => {
+        event.preventDefault()
+        const { username, email, password } = this.state
+        let user = {
+            username: username,
+            email: email,
+            password: password
+        }
 
-    onSubmit(event) {
-        event.preventDefault();
-        const {
-            match: {
-                params: { login,
-                    password }
-            }
-        } = this.props;
-        const { login,
-            password } = this.state;
-        const body = {
-            login,
-            password
-        };
-        const url = `/api/v1/auth/login/`;
-
-        fetch(url)
+        axios.post('http://localhost:3001/login', { user }, { withCredentials: true })
             .then(response => {
-                if (response.ok) {
-                    return response.json();
+                if (response.data.logged_in) {
+                    this.props.handleLogin(response.data)
+                    this.redirect()
+                } else {
+                    this.setState({
+                        errors: response.data.errors
+                    })
                 }
-                throw new Error("Network response was not ok.");
             })
-
-        const token = document.querySelector('meta[name="csrf-token"]').content;
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "X-CSRF-Token": token,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(body)
-        })
-            .then(response => this.setState({ product: response }))
-            .then(() => this.props.history.push("/products"));
-
-
+            .catch(error => console.log('api errors:', error))
+    };
+    redirect = () => {
+        this.props.history.push('/')
     }
+    handleErrors = () => {
+        return (
+            <div>
+                <ul>
+                    {this.state.errors.map(error => {
+                        return <li key={error}>{error}</li>
+                    })}
+                </ul>
+            </div>
+        )
+    };
     render() {
-        const { login, password } = this.state
-
+        const { username, email, password } = this.state
         return (
             <div>
                 <h1>Log In</h1>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.handleSubmit}>
                     <input
-                        placeholder="login"
+                        placeholder="username"
                         type="text"
-                        name="login"
-                        value={login}
+                        name="username"
+                        value={username}
+                        onChange={this.handleChange}
+                    />
+                    <input
+                        placeholder="email"
+                        type="text"
+                        name="email"
+                        value={email}
                         onChange={this.handleChange}
                     />
                     <input
@@ -87,16 +81,35 @@ class Login extends React.Component {
                         value={password}
                         onChange={this.handleChange}
                     />
-                    <button placeholder="submit" type="submit">
+                    <button placeholder="submit" type="submit" >
                         Log In
-                    </button>
+          </button>
                     <div>
+                        <hr className="my-4" />  <p>or</p>
                         <Link
                             to="/signup"
-                            className="btn btn-lg custom-button"
+                            className="btn btn-sm custom-button"
                             role="button"
                         >
                             Sign up
+        </Link>
+                        <hr className="my-4" />  <p>or</p>
+                        <Link
+                            to="/"
+                            className="btn btn-sm custom-button"
+                            role="button"
+                        >
+                            Home
+        </Link>
+
+                        <hr className="my-4" />  <p>or</p>
+                        <Link
+                            to="/signup"
+                            className="btn btn-sm custom-button"
+                            role="button"
+
+                        >
+                            Log out
         </Link>
                     </div>
 
