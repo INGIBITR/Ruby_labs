@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class NewProduct extends React.Component {
+class EditProduct extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: this.id,
             name: this.name,
             price: this.price,
             amount: this.amount
@@ -24,7 +25,12 @@ class NewProduct extends React.Component {
                 params: { id }
             }
         } = this.props;
-
+        const { name, price, amount } = this.state;
+        const body = {
+            name,
+            price,
+            amount: amount.replace(/\n/g, "<br> <br>")
+        };
         const url = `/api/v1/edit/${id}`;
 
         fetch(url)
@@ -42,9 +48,11 @@ class NewProduct extends React.Component {
                 "X-CSRF-Token": token,
                 "Content-Type": "application/json"
             },
+            body: JSON.stringify(body)
         })
             .then(response => this.setState({ product: response }))
-            .catch(() => this.props.history.push("/products"));
+            .then(() => this.props.history.push("/products"));
+
 
     }
     render() {
@@ -104,4 +112,4 @@ class NewProduct extends React.Component {
     }
 }
 
-export default NewProduct;
+export default EditProduct;

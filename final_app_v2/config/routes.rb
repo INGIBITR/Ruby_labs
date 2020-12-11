@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      match "auth/register", via: %i[post get], as: :register
+      match "auth/login", via: %i[post get], as: :login
+      get "auth/logout", as: :logout
+      get "auth/login", to: "auth#login"
+      get "auth/register", to: "auth#register"
+      #get "auth/logout", to: "auth#logout"
+      resources :users
       get "products/index"
       post "products/create"
       post "edit/:id", to: "products#edit"

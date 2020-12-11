@@ -8483,3 +8483,3114 @@ app/controllers/api/v1/products_controller.rb:18:in `edit'
 Completed 200 OK in 180ms (Views: 178.9ms | ActiveRecord: 0.0ms | Allocations: 199581)
 
 
+Started GET "/auth/login" for ::1 at 2020-12-11 15:11:24 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"auth/login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 11159)
+
+
+Started GET "/" for ::1 at 2020-12-11 15:11:29 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:11:32 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 1.5ms | Allocations: 7294)
+
+
+Started GET "/api/v1/show/17" for ::1 at 2020-12-11 15:11:33 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1391)
+
+
+Started DELETE "/api/v1/destroy/17" for ::1 at 2020-12-11 15:11:35 +0300
+Processing by Api::V1::ProductsController#destroy as */*
+  Parameters: {"id"=>"17", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 2795)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:11:35 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2150)
+
+
+Started GET "/api/v1/show/16" for ::1 at 2020-12-11 15:11:38 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 944)
+
+
+Started DELETE "/api/v1/destroy/16" for ::1 at 2020-12-11 15:11:39 +0300
+Processing by Api::V1::ProductsController#destroy as */*
+  Parameters: {"id"=>"16", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 7.2ms | Allocations: 2748)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:11:39 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 2017)
+
+
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 15:11:48 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"vv", "price"=>"34", "amount"=>"32", "product"=>{"name"=>"vv", "price"=>"34", "amount"=>"32"}}
+[31mUnpermitted parameter: :product[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "vv"], ["price", 34], ["amount", 32], ["created_at", "2020-12-11 12:11:48.397957"], ["updated_at", "2020-12-11 12:11:48.397957"]]
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 2975)
+
+
+Started GET "/api/v1/show/18" for ::1 at 2020-12-11 15:11:48 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 939)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:11:50 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 2152)
+
+
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 15:11:58 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"vv", "price"=>"32", "amount"=>"34", "product"=>{"name"=>"vv", "price"=>"32", "amount"=>"34"}}
+[31mUnpermitted parameter: :product[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "vv"], ["price", 32], ["amount", 34], ["created_at", "2020-12-11 12:11:58.078614"], ["updated_at", "2020-12-11 12:11:58.078614"]]
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 2761)
+
+
+Started GET "/api/v1/show/19" for ::1 at 2020-12-11 15:11:58 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 941)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:00 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 2291)
+
+
+Started GET "/api/v1/show/18" for ::1 at 2020-12-11 15:12:01 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 947)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:02 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 2294)
+
+
+Started GET "/api/v1/show/19" for ::1 at 2020-12-11 15:12:03 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 948)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:03 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 2289)
+
+
+Started GET "/api/v1/show/18" for ::1 at 2020-12-11 15:12:04 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 934)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:06 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 2287)
+
+
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 15:12:12 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"vv", "price"=>"32", "amount"=>"34", "product"=>{"name"=>"vv", "price"=>"32", "amount"=>"34"}}
+[31mUnpermitted parameter: :product[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "vv"], ["price", 32], ["amount", 34], ["created_at", "2020-12-11 12:12:12.407839"], ["updated_at", "2020-12-11 12:12:12.407839"]]
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 2.1ms | Allocations: 3483)
+
+
+Started GET "/api/v1/show/20" for ::1 at 2020-12-11 15:12:12 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 949)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:22 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 2785)
+
+
+Started GET "/api/v1/show/20" for ::1 at 2020-12-11 15:12:24 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 945)
+
+
+Started DELETE "/api/v1/destroy/20" for ::1 at 2020-12-11 15:12:25 +0300
+Processing by Api::V1::ProductsController#destroy as */*
+  Parameters: {"id"=>"20", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2734)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:25 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 2288)
+
+
+Started GET "/api/v1/show/19" for ::1 at 2020-12-11 15:12:26 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 945)
+
+
+Started DELETE "/api/v1/destroy/19" for ::1 at 2020-12-11 15:12:26 +0300
+Processing by Api::V1::ProductsController#destroy as */*
+  Parameters: {"id"=>"19", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2736)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:26 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 2145)
+
+
+Started GET "/api/v1/show/18" for ::1 at 2020-12-11 15:12:27 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 939)
+
+
+Started DELETE "/api/v1/destroy/18" for ::1 at 2020-12-11 15:12:28 +0300
+Processing by Api::V1::ProductsController#destroy as */*
+  Parameters: {"id"=>"18", "product"=>{}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:35:in `destroy'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 9.9ms | Allocations: 3137)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:12:28 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2011)
+
+
+Started GET "/api/v1/show/13" for ::1 at 2020-12-11 15:13:29 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1288)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:13:37 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:13:37 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1510)
+
+
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, NilClass passed.):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 177ms (Views: 175.4ms | ActiveRecord: 0.0ms | Allocations: 187482)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:14:08 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 6374)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:14:14 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:14:14 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.3ms | Allocations: 5277)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 248ms (Views: 246.7ms | ActiveRecord: 0.0ms | Allocations: 214532)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:20:02 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 6343)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:20:07 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:20:07 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 4934)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, NilClass passed.):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 193ms (Views: 192.6ms | ActiveRecord: 0.0ms | Allocations: 198247)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:20:43 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6352)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:20:48 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:20:48 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms | Allocations: 4993)
+
+
+  
+NoMethodError (undefined method `name' for #<ActionController::Parameters:0x00007ffa4a09c940>):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 185ms (Views: 183.9ms | ActiveRecord: 0.0ms | Allocations: 152689)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:21:06 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 6394)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:10 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:10 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 9245)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms | Allocations: 17888)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:21:26 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 2029)
+
+
+Started GET "/api/v1/show/13" for ::1 at 2020-12-11 15:21:28 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 966)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:36 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:36 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+Processing by Api::V1::ProductsController#edit as */*
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 2116)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 9048)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:50 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:50 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+Processing by HomepageController#index as */*
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Parameters: {"path"=>"api/v1/edit/13"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 2069)
+
+
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 6593)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:55 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:55 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+Processing by Api::V1::ProductsController#edit as */*
+  Rendering homepage/index.html.erb within layouts/application
+  Parameters: {"id"=>"13", "product"=>{}}
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 2228)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 8696)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:59 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:21:59 +0300
+Processing by Api::V1::ProductsController#edit as */*
+Processing by HomepageController#index as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  Parameters: {"path"=>"api/v1/edit/13"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering homepage/index.html.erb within layouts/application
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 2479)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 8321)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:22:17 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6350)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:22:23 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:22:23 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "erf"], ["updated_at", "2020-12-11 12:22:23.095508"], ["id", 13]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 8041)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 17221)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:22:38 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 6395)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:22:45 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:22:45 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Processing by HomepageController#index as */*
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 6144)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 6595)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:23:58 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: facfd636a073a4aebafe
+Version: webpack 4.44.2
+Time: 10836ms
+Built at: 11.12.2020 15:24:11
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-0f670cd372c0e5371bfa.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-0f670cd372c0e5371bfa.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-0f670cd372c0e5371bfa.js js/Index-0f670cd372c0e5371bfa.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13474ms (Views: 13473.6ms | ActiveRecord: 0.0ms | Allocations: 7517)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:24:17 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:24:17 +0300
+Processing by Api::V1::ProductsController#edit as */*
+Processing by HomepageController#index as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  Parameters: {"path"=>"api/v1/edit/13"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Rendering homepage/index.html.erb within layouts/application
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 2430)
+
+
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 8313)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:24:33 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 6346)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:24:37 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:24:37 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 75)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.4ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "name"], ["updated_at", "2020-12-11 12:24:37.209437"], ["id", 13]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 7714)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms | Allocations: 16128)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:24:41 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 2029)
+
+
+Started GET "/index" for ::1 at 2020-12-11 15:25:11 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"index"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 6232)
+
+
+Started GET "/api/v1/show/13" for ::1 at 2020-12-11 15:25:51 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 17ms (Views: 0.8ms | ActiveRecord: 1.6ms | Allocations: 5699)
+
+
+Started GET "/product/13" for ::1 at 2020-12-11 15:25:52 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 6394)
+
+
+Started GET "/api/v1/show/13" for ::1 at 2020-12-11 15:25:53 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 940)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:25:58 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:25:58 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1277)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, NilClass passed.):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 187ms (Views: 186.6ms | ActiveRecord: 0.0ms | Allocations: 193633)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:30:46 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 2fe98ea3180e37c470ae
+Version: webpack 4.44.2
+Time: 3569ms
+Built at: 11.12.2020 15:30:52
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-9c7be5a18e6cb078c2f0.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-9c7be5a18e6cb078c2f0.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-9c7be5a18e6cb078c2f0.js js/Index-9c7be5a18e6cb078c2f0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5210ms (Views: 5209.2ms | ActiveRecord: 0.0ms | Allocations: 7471)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:31:00 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:31:00 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Processing by HomepageController#index as */*
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Parameters: {"path"=>"api/v1/edit/13"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1526)
+
+
+  Rendering homepage/index.html.erb within layouts/application
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, NilClass passed.):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 162ms (Views: 161.8ms | ActiveRecord: 0.0ms | Allocations: 184545)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:31:18 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 6350)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:31:23 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:31:23 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.5ms | Allocations: 5096)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, Symbol passed.):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 186ms (Views: 185.1ms | ActiveRecord: 0.0ms | Allocations: 192887)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:32:26 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 6342)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:32:30 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:32:30 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.8ms | Allocations: 53206)
+
+
+  
+NameError (undefined local variable or method `name' for #<Api::V1::ProductsController:0x00007ffa49b05ba8>):
+  
+app/controllers/api/v1/products_controller.rb:18:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 433ms (Views: 431.9ms | ActiveRecord: 0.0ms | Allocations: 233390)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:32:56 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6364)
+
+
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:33:00 +0300
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:33:00 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 9865)
+
+
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 200 OK in 16ms (Views: 0.8ms | ActiveRecord: 1.3ms | Allocations: 5883)
+
+
+Started GET "/editProduct/13" for ::1 at 2020-12-11 15:33:34 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 6349)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:33:38 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:33:38 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/13"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 29)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "#<Product:0x00007ffa4e80f908>"], ["updated_at", "2020-12-11 12:33:38.108170"], ["id", 13]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 3.9ms | Allocations: 8658)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms | Allocations: 17312)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:33:47 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 2039)
+
+
+Started GET "/products" for ::1 at 2020-12-11 15:34:17 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 6341)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:34:17 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 1.3ms | Allocations: 6633)
+
+
+Started GET "/api/v1/show/13" for ::1 at 2020-12-11 15:34:19 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1072)
+
+
+Started GET "/api/v1/edit/13" for ::1 at 2020-12-11 15:34:26 +0300
+Started POST "/api/v1/edit/13" for ::1 at 2020-12-11 15:34:26 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"id"=>"13", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Processing by HomepageController#index as */*
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Parameters: {"path"=>"api/v1/edit/13"}
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1452)
+
+
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 6588)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:35:01 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2042)
+
+
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 15:35:08 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"dd", "price"=>"23", "amount"=>"2", "product"=>{"name"=>"dd", "price"=>"23", "amount"=>"2"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 643)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: products):
+  
+app/controllers/api/v1/products_controller.rb:42:in `product_params'
+app/controllers/api/v1/products_controller.rb:8:in `create'
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 15:35:18 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"dd222", "price"=>"23", "amount"=>"2", "product"=>{"name"=>"dd222", "price"=>"23", "amount"=>"2"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 643)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: products):
+  
+app/controllers/api/v1/products_controller.rb:42:in `product_params'
+app/controllers/api/v1/products_controller.rb:8:in `create'
+Started GET "/product" for ::1 at 2020-12-11 15:36:16 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 6347)
+
+
+Started POST "/api/v1/products/create" for ::1 at 2020-12-11 15:36:22 +0300
+Processing by Api::V1::ProductsController#create as */*
+  Parameters: {"name"=>"3232", "price"=>"33", "amount"=>"3", "product"=>{"name"=>"3232", "price"=>"33", "amount"=>"3"}}
+[31mUnpermitted parameter: :product[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "3232"], ["price", 33], ["amount", 3], ["created_at", "2020-12-11 12:36:22.509911"], ["updated_at", "2020-12-11 12:36:22.509911"]]
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:8:in `create'
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 2.7ms | Allocations: 6473)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:36:22 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1080)
+
+
+Started GET "/product/21" for ::1 at 2020-12-11 15:37:34 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 7310)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:37:35 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 5689)
+
+
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 15:37:38 +0300
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 15:37:38 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"id"=>"21", "product"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+[31mUnpermitted parameters: :id, :product[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "{}"], ["updated_at", "2020-12-11 12:37:38.798328"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 4038)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 11955)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:37:46 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 2177)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:39:07 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 940)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:40:35 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: ddf76fbb605c39286388
+Version: webpack 4.44.2
+Time: 3404ms
+Built at: 11.12.2020 15:40:40
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-b1276989f5b10bd2b2d6.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-b1276989f5b10bd2b2d6.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-b1276989f5b10bd2b2d6.js js/Index-b1276989f5b10bd2b2d6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5381ms (Views: 5379.8ms | ActiveRecord: 0.0ms | Allocations: 7463)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:44:33 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: a34abcc1b86675efcafb
+Version: webpack 4.44.2
+Time: 3558ms
+Built at: 11.12.2020 15:44:38
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-5b2ede42ff7dc38a1b6e.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-5b2ede42ff7dc38a1b6e.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-5b2ede42ff7dc38a1b6e.js js/Index-5b2ede42ff7dc38a1b6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5710ms (Views: 5709.1ms | ActiveRecord: 0.0ms | Allocations: 7468)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:44:40 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 2164)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:44:41 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 938)
+
+
+Started POST "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:44:49 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"aed", "price"=>"33", "amount"=>"33", "id"=>"undefined", "product"=>{"name"=>"aed", "price"=>"33", "amount"=>"33"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Started GET "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:44:49 +0300
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1480)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=undefined):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/undefined"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 11952)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:46:00 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: dfe15f203a82a63d31f0
+Version: webpack 4.44.2
+Time: 4063ms
+Built at: 11.12.2020 15:46:06
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-8fcb655faf30e0a49f20.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-8fcb655faf30e0a49f20.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-8fcb655faf30e0a49f20.js js/Index-8fcb655faf30e0a49f20.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5866ms (Views: 5865.4ms | ActiveRecord: 0.0ms | Allocations: 7466)
+
+
+Started POST "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:46:21 +0300
+Started GET "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:46:21 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"ffsrf", "price"=>"32", "amount"=>"3", "id"=>"undefined", "product"=>{"name"=>"ffsrf", "price"=>"32", "amount"=>"3"}}
+Processing by HomepageController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1172)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=undefined):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Parameters: {"path"=>"api/v1/edit/undefined"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 51702)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:47:15 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 6343)
+
+
+Started POST "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:47:19 +0300
+Started GET "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:47:19 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/undefined"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 8)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"w3", "price"=>"33", "amount"=>"3", "id"=>"undefined", "product"=>{"name"=>"w3", "price"=>"33", "amount"=>"3"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.1ms | Allocations: 1406)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=undefined):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 152ms (Views: 150.7ms | ActiveRecord: 0.0ms | Allocations: 151140)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:48:04 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 2eb80b0885add3ffe232
+Version: webpack 4.44.2
+Time: 4327ms
+Built at: 11.12.2020 15:48:10
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-0503510572ad52d5f920.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-0503510572ad52d5f920.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-0503510572ad52d5f920.js js/Index-0503510572ad52d5f920.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5715ms (Views: 5714.4ms | ActiveRecord: 0.0ms | Allocations: 7463)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:49:37 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 4c66b26fcdafa9712375
+Version: webpack 4.44.2
+Time: 3656ms
+Built at: 11.12.2020 15:49:42
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-4019bb068391d9114ca6.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-4019bb068391d9114ca6.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-4019bb068391d9114ca6.js js/Index-4019bb068391d9114ca6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5127ms (Views: 5126.4ms | ActiveRecord: 0.0ms | Allocations: 7467)
+
+
+Started POST "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:49:46 +0300
+Started GET "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:49:46 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"rfsf", "price"=>"3", "amount"=>"3", "id"=>"undefined", "product"=>{"name"=>"rfsf", "price"=>"3", "amount"=>"3"}}
+Processing by HomepageController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Parameters: {"path"=>"api/v1/edit/undefined"}
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Rendering homepage/index.html.erb within layouts/application
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=undefined):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 166ms (Views: 165.0ms | ActiveRecord: 0.0ms | Allocations: 162493)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:50:33 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 6344)
+
+
+Started GET "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:50:42 +0300
+Started POST "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:50:42 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/undefined"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"wf", "price"=>"3", "amount"=>"3", "id"=>"undefined", "product"=>{"name"=>"wf", "price"=>"3", "amount"=>"3"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms | Allocations: 1403)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=wf):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 154ms (Views: 153.5ms | ActiveRecord: 0.0ms | Allocations: 151505)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:50:53 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 6225)
+
+
+Started POST "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:50:57 +0300
+Started GET "/api/v1/edit/undefined" for ::1 at 2020-12-11 15:50:57 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"fe", "price"=>"3", "amount"=>"3", "id"=>"undefined", "product"=>{"name"=>"fe", "price"=>"3", "amount"=>"3"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1167)
+
+
+Processing by HomepageController#index as */*
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=fe):
+  
+app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Parameters: {"path"=>"api/v1/edit/undefined"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 27098)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:51:40 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 8427902582e93ab9b90a
+Version: webpack 4.44.2
+Time: 3146ms
+Built at: 11.12.2020 15:51:45
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-7977c6f8575beef8f8dc.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-7977c6f8575beef8f8dc.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-7977c6f8575beef8f8dc.js js/Index-7977c6f8575beef8f8dc.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4586ms (Views: 4584.7ms | ActiveRecord: 0.0ms | Allocations: 7577)
+
+
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 15:51:55 +0300
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 15:51:55 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"fef", "price"=>"3", "amount"=>"3", "id"=>"21", "product"=>{"name"=>"fef", "price"=>"3", "amount"=>"3"}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "fef"], ["updated_at", "2020-12-11 12:51:55.849588"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 3.9ms | Allocations: 8642)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms | Allocations: 16007)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:52:17 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2180)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:52:18 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:46:in `product'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 958)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:56:23 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6344)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:56:27 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 1.9ms | Allocations: 6813)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:56:28 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:47:in `product'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1061)
+
+
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 15:56:37 +0300
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 15:56:37 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"name"=>"feffff", "price"=>"12345", "amount"=>"123", "id"=>"21", "product"=>{"name"=>"feffff", "price"=>"12345", "amount"=>"123"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.7ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "feffff"], ["updated_at", "2020-12-11 12:56:37.417919"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 12345], ["updated_at", "2020-12-11 12:56:37.425543"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 6902)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 11145)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:56:43 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.8ms | Allocations: 2186)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:56:44 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:47:in `product'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 959)
+
+
+Started GET "/product/21" for ::1 at 2020-12-11 15:57:02 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 6349)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:57:03 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:47:in `product'
+Completed 200 OK in 22ms (Views: 0.9ms | ActiveRecord: 1.4ms | Allocations: 5694)
+
+
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 15:57:11 +0300
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 15:57:11 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"asd", "price"=>"12", "amount"=>"123", "id"=>"21", "product"=>{"name"=>"asd", "price"=>"12", "amount"=>"123"}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "asd"], ["updated_at", "2020-12-11 12:57:11.310604"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.8ms)[0m  [1m[33mUPDATE "products" SET "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["amount", 123], ["updated_at", "2020-12-11 12:57:11.316049"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 3.2ms | Allocations: 6780)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 14155)
+
+
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 15:57:14 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 15:57:14 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"asd", "price"=>"12", "amount"=>"123", "id"=>"21", "product"=>{"name"=>"asd", "price"=>"12", "amount"=>"123"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1231)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms | Allocations: 9000)
+
+
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 15:57:14 +0300
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 15:57:14 +0300
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"asd", "price"=>"12", "amount"=>"123", "id"=>"21", "product"=>{"name"=>"asd", "price"=>"12", "amount"=>"123"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Processing by HomepageController#index as */*
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  Parameters: {"path"=>"api/v1/edit/21"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1487)
+
+
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 6590)
+
+
+Started GET "/editProduct/21" for ::1 at 2020-12-11 15:57:58 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"editProduct/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 9012)
+
+
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 15:58:09 +0300
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 15:58:09 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"asdf", "price"=>"233", "amount"=>"322", "id"=>"21", "product"=>{"name"=>"asdf", "price"=>"233", "amount"=>"322"}}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.8ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "asdf"], ["updated_at", "2020-12-11 12:58:09.073288"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 233], ["updated_at", "2020-12-11 12:58:09.081687"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[36mProduct Update (1.0ms)[0m  [1m[33mUPDATE "products" SET "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["amount", 322], ["updated_at", "2020-12-11 12:58:09.090775"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+Completed 200 OK in 54ms (Views: 0.6ms | ActiveRecord: 7.5ms | Allocations: 13590)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms | Allocations: 20709)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 15:58:15 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 2182)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 15:58:16 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 958)
+
+
+Started GET "/product/21" for ::1 at 2020-12-11 16:04:19 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: f4408211963c505776d6
+Version: webpack 4.44.2
+Time: 3999ms
+Built at: 11.12.2020 16:04:25
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-70517b30a33abcfdb03b.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-70517b30a33abcfdb03b.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-70517b30a33abcfdb03b.js js/Index-70517b30a33abcfdb03b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6037ms (Views: 6035.8ms | ActiveRecord: 0.0ms | Allocations: 7471)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 16:04:25 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 958)
+
+
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 16:04:30 +0300
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 16:04:30 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"ads", "price"=>"3", "amount"=>"3", "id"=>"21", "product"=>{"name"=>"ads", "price"=>"3", "amount"=>"3"}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.7ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "ads"], ["updated_at", "2020-12-11 13:04:30.450213"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.4ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 3], ["updated_at", "2020-12-11 13:04:30.458969"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["amount", 3], ["updated_at", "2020-12-11 13:04:30.466008"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+Completed 200 OK in 26ms (Views: 0.7ms | ActiveRecord: 7.3ms | Allocations: 9240)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 15807)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 16:04:40 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 2178)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 16:04:41 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 943)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 16:04:42 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 2157)
+
+
+Started GET "/products" for ::1 at 2020-12-11 16:04:58 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: f017fd68b2b383458f5d
+Version: webpack 4.44.2
+Time: 3881ms
+Built at: 11.12.2020 16:05:03
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-4fd078bc9e2b09c1241a.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-4fd078bc9e2b09c1241a.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-4fd078bc9e2b09c1241a.js js/Index-4fd078bc9e2b09c1241a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5718ms (Views: 5717.1ms | ActiveRecord: 0.0ms | Allocations: 7468)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 16:05:04 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 2160)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 16:05:05 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 940)
+
+
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 16:05:13 +0300
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 16:05:13 +0300
+Processing by HomepageController#index as */*
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+  Parameters: {"name"=>"wer", "price"=>"33", "amount"=>"33", "id"=>"21", "product"=>{"name"=>"wer", "price"=>"33", "amount"=>"33"}}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "wer"], ["updated_at", "2020-12-11 13:05:13.886164"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 33], ["updated_at", "2020-12-11 13:05:13.891181"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[36mProduct Update (0.4ms)[0m  [1m[33mUPDATE "products" SET "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["amount", 33], ["updated_at", "2020-12-11 13:05:13.895509"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 9173)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 14497)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 16:05:19 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 2159)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 16:05:21 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 944)
+
+
+Started GET "/product/21" for ::1 at 2020-12-11 16:06:16 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"product/21"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 4abcba04ddd76266b37a
+Version: webpack 4.44.2
+Time: 4230ms
+Built at: 11.12.2020 16:06:22
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-f2843603172bddeb1735.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-f2843603172bddeb1735.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-f2843603172bddeb1735.js js/Index-f2843603172bddeb1735.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6239ms (Views: 6238.8ms | ActiveRecord: 0.0ms | Allocations: 7465)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 16:06:23 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 936)
+
+
+Started GET "/api/v1/edit/21" for ::1 at 2020-12-11 16:06:29 +0300
+Processing by HomepageController#index as */*
+  Parameters: {"path"=>"api/v1/edit/21"}
+Started POST "/api/v1/edit/21" for ::1 at 2020-12-11 16:06:29 +0300
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Processing by Api::V1::ProductsController#edit as */*
+  Parameters: {"name"=>"wert", "price"=>"44", "amount"=>"44", "id"=>"21", "product"=>{"name"=>"wert", "price"=>"44", "amount"=>"44"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:17:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[36mProduct Update (0.7ms)[0m  [1m[33mUPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["name", "wert"], ["updated_at", "2020-12-11 13:06:29.863186"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:18:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 44], ["updated_at", "2020-12-11 13:06:29.871431"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:19:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "amount" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["amount", 44], ["updated_at", "2020-12-11 13:06:29.880595"], ["id", 21]]
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20:in `edit'
+Completed 200 OK in 29ms (Views: 0.7ms | ActiveRecord: 5.9ms | Allocations: 10416)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.0ms | Allocations: 15106)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 16:06:29 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 2153)
+
+
+Started GET "/api/v1/show/21" for ::1 at 2020-12-11 16:06:36 +0300
+Processing by Api::V1::ProductsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:48:in `product'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 938)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 16:06:38 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 2156)
+
+
+Started GET "/products" for ::1 at 2020-12-11 16:31:39 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: ab09e81c93b29bae3fe8
+Version: webpack 4.44.2
+Time: 3911ms
+Built at: 11.12.2020 16:31:45
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-d394ea9974f7d7e05a3f.js   2.68 MiB        Index  [emitted] [immutable]  Index
+      js/Index-d394ea9974f7d7e05a3f.js.map   2.92 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-d394ea9974f7d7e05a3f.js js/Index-d394ea9974f7d7e05a3f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 47 hidden modules
+
+ERROR in ./app/javascript/components/Signup.jsx
+Module not found: Error: Can't resolve 'axios' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/Signup.jsx 26:0-26
+ @ ./app/javascript/routes/Index.jsx
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6277ms (Views: 6273.6ms | ActiveRecord: 0.0ms | Allocations: 7463)
+
+
+Started GET "/products" for ::1 at 2020-12-11 16:32:43 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 6278)
+
+
+Started GET "/products" for ::1 at 2020-12-11 16:32:46 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 6279)
+
+
+Started GET "/products" for ::1 at 2020-12-11 16:34:25 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"products"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 190)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 50db1e5f25dc5bd3e078
+Version: webpack 4.44.2
+Time: 3623ms
+Built at: 11.12.2020 16:34:30
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-0fa87b11b8bb22fd0315.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-0fa87b11b8bb22fd0315.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-0fa87b11b8bb22fd0315.js js/Index-0fa87b11b8bb22fd0315.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5464ms (Views: 5448.9ms | ActiveRecord: 0.0ms | Allocations: 11800)
+
+
+Started GET "/api/v1/products/index" for ::1 at 2020-12-11 16:34:31 +0300
+Processing by Api::V1::ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 1.8ms | Allocations: 7111)
+
+
+Started GET "/" for ::1 at 2020-12-11 16:34:34 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 6293)
+
+
+Started GET "/login" for ::1 at 2020-12-11 16:35:57 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:11:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/login" for ::1 at 2020-12-11 16:36:07 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:11:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/login" for ::1 at 2020-12-11 16:38:09 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: bb889f5694418c97618c
+Version: webpack 4.44.2
+Time: 3295ms
+Built at: 11.12.2020 16:38:14
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-71d19596300168c7abd1.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-71d19596300168c7abd1.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-71d19596300168c7abd1.js js/Index-71d19596300168c7abd1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4866ms (Views: 4865.0ms | ActiveRecord: 0.0ms | Allocations: 7686)
+
+
+Started GET "/login" for ::1 at 2020-12-11 16:38:58 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: c0e4215cbb17be835cc9
+Version: webpack 4.44.2
+Time: 3455ms
+Built at: 11.12.2020 16:39:03
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-5ced1818698500f0a8b1.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-5ced1818698500f0a8b1.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-5ced1818698500f0a8b1.js js/Index-5ced1818698500f0a8b1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4904ms (Views: 4903.4ms | ActiveRecord: 0.0ms | Allocations: 7546)
+
+
+Started GET "/login" for ::1 at 2020-12-11 16:40:19 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: a9139ea79f1edf204496
+Version: webpack 4.44.2
+Time: 3126ms
+Built at: 11.12.2020 16:40:24
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-2106710b5d3c9e1db190.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-2106710b5d3c9e1db190.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-2106710b5d3c9e1db190.js js/Index-2106710b5d3c9e1db190.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4577ms (Views: 4576.6ms | ActiveRecord: 0.0ms | Allocations: 7535)
+
+
+Started GET "/login" for ::1 at 2020-12-11 16:40:58 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 57795d081da4163fcfab
+Version: webpack 4.44.2
+Time: 3348ms
+Built at: 11.12.2020 16:41:03
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-49613de27ae86ca24dc7.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-49613de27ae86ca24dc7.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-49613de27ae86ca24dc7.js js/Index-49613de27ae86ca24dc7.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4791ms (Views: 4789.9ms | ActiveRecord: 0.0ms | Allocations: 7542)
+
+
+Started GET "/login" for ::1 at 2020-12-11 16:41:24 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 3d29847fd66e10c7972a
+Version: webpack 4.44.2
+Time: 3180ms
+Built at: 11.12.2020 16:41:29
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-3035c34aad4c4deb9463.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-3035c34aad4c4deb9463.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-3035c34aad4c4deb9463.js js/Index-3035c34aad4c4deb9463.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4730ms (Views: 4729.8ms | ActiveRecord: 0.0ms | Allocations: 7539)
+
+
+Started GET "/login" for ::1 at 2020-12-11 16:41:47 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 6562e93c39db9cfb1fce
+Version: webpack 4.44.2
+Time: 4034ms
+Built at: 11.12.2020 16:41:52
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-229dac4bb0bd80f4d7d0.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-229dac4bb0bd80f4d7d0.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-229dac4bb0bd80f4d7d0.js js/Index-229dac4bb0bd80f4d7d0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5703ms (Views: 5701.6ms | ActiveRecord: 0.0ms | Allocations: 7541)
+
+
+Started GET "/login" for ::1 at 2020-12-11 16:42:36 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 1f126de337209b119f3b
+Version: webpack 4.44.2
+Time: 3684ms
+Built at: 11.12.2020 16:42:41
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-bab74ea2341868624084.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-bab74ea2341868624084.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-bab74ea2341868624084.js js/Index-bab74ea2341868624084.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5258ms (Views: 5257.0ms | ActiveRecord: 0.0ms | Allocations: 7544)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 16:43:40 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: c367f686e95da443b2ef
+Version: webpack 4.44.2
+Time: 3718ms
+Built at: 11.12.2020 16:43:46
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-49f4250c703d741b9d1b.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-49f4250c703d741b9d1b.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-49f4250c703d741b9d1b.js js/Index-49f4250c703d741b9d1b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5245ms (Views: 5244.8ms | ActiveRecord: 0.0ms | Allocations: 7537)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 16:44:07 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 09ec8a2c4334c2c977b2
+Version: webpack 4.44.2
+Time: 3143ms
+Built at: 11.12.2020 16:44:11
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-0c70eaea60e1af49d86c.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-0c70eaea60e1af49d86c.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-0c70eaea60e1af49d86c.js js/Index-0c70eaea60e1af49d86c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4812ms (Views: 4810.8ms | ActiveRecord: 0.0ms | Allocations: 7538)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 16:53:24 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: eceec235bffa9f64949f
+Version: webpack 4.44.2
+Time: 3253ms
+Built at: 11.12.2020 16:53:29
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-1194fa203ca77d9d4e8e.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-1194fa203ca77d9d4e8e.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-1194fa203ca77d9d4e8e.js js/Index-1194fa203ca77d9d4e8e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve './components/Home' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 27:0-37 134:50-54
+ @ ./app/javascript/packs/Index.jsx
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve './components/Login' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 28:0-39 154:50-55
+ @ ./app/javascript/packs/Index.jsx
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve './components/Signup' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 29:0-41 175:50-56
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5083ms (Views: 5081.9ms | ActiveRecord: 0.0ms | Allocations: 7464)
+
+
+Started GET "/signup" for ::1 at 2020-12-11 16:54:17 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"signup"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 71ae2045fe8d04e63c8e
+Version: webpack 4.44.2
+Time: 2999ms
+Built at: 11.12.2020 16:54:22
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-1ae56889d8158da0b4ba.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-1ae56889d8158da0b4ba.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-1ae56889d8158da0b4ba.js js/Index-1ae56889d8158da0b4ba.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve './components/Home' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 27:0-37 134:50-54
+ @ ./app/javascript/packs/Index.jsx
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve './components/Login' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 28:0-39 154:50-55
+ @ ./app/javascript/packs/Index.jsx
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve './components/Signup' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 29:0-41 175:50-56
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4543ms (Views: 4541.2ms | ActiveRecord: 0.0ms | Allocations: 7460)
+
+
+Started GET "/" for ::1 at 2020-12-11 16:54:25 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 6284)
+
+
+Started GET "/" for ::1 at 2020-12-11 16:55:21 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 4b91f313b8b21d8acbbe
+Version: webpack 4.44.2
+Time: 3480ms
+Built at: 11.12.2020 16:55:26
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-1509e7a01f072994024a.js   2.74 MiB        Index  [emitted] [immutable]  Index
+      js/Index-1509e7a01f072994024a.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-1509e7a01f072994024a.js js/Index-1509e7a01f072994024a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5434ms (Views: 5432.9ms | ActiveRecord: 0.0ms | Allocations: 7547)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:00:58 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 6399)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20201210232228)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "price" integer NOT NULL, "amount" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201210232228"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-11 14:04:12.369249"], ["updated_at", "2020-12-11 14:04:12.369249"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/login" for ::1 at 2020-12-11 17:04:27 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 40.9ms | ActiveRecord: 0.0ms | Allocations: 10507)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:04:33 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms | Allocations: 6284)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:08:02 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: c11b99e20cd9d424566d
+Version: webpack 4.44.2
+Time: 3397ms
+Built at: 11.12.2020 17:08:07
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-110ce64d3ebf5a0fc0fc.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-110ce64d3ebf5a0fc0fc.js.map   2.97 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-110ce64d3ebf5a0fc0fc.js js/Index-110ce64d3ebf5a0fc0fc.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 72 hidden modules
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve '../components/Login' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 28:0-40 154:50-55
+ @ ./app/javascript/packs/Index.jsx
+
+ERROR in ./app/javascript/routes/Index.jsx
+Module not found: Error: Can't resolve '../components/Login' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/routes'
+ @ ./app/javascript/routes/Index.jsx 9:0-40 78:13-18
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+ERROR in ./app/javascript/components/App.jsx
+Module not found: Error: Can't resolve '../components/Signup' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/components'
+ @ ./app/javascript/components/App.jsx 29:0-42 175:50-56
+ @ ./app/javascript/packs/Index.jsx
+
+ERROR in ./app/javascript/routes/Index.jsx
+Module not found: Error: Can't resolve '../components/Signup' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/routes'
+ @ ./app/javascript/routes/Index.jsx 10:0-42 88:13-19
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4985ms (Views: 4983.1ms | ActiveRecord: 0.0ms | Allocations: 7533)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:08:32 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 9111844dc9a8bc5160cb
+Version: webpack 4.44.2
+Time: 3323ms
+Built at: 11.12.2020 17:08:37
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-42dfa6cb6c28ad426175.js   2.72 MiB        Index  [emitted] [immutable]  Index
+      js/Index-42dfa6cb6c28ad426175.js.map   2.97 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-42dfa6cb6c28ad426175.js js/Index-42dfa6cb6c28ad426175.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 72 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4801ms (Views: 4800.7ms | ActiveRecord: 0.0ms | Allocations: 7462)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:09:02 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: b6b03655ba5af46a5380
+Version: webpack 4.44.2
+Time: 2840ms
+Built at: 11.12.2020 17:09:06
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-96e08ca25afa5acab0ad.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-96e08ca25afa5acab0ad.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-96e08ca25afa5acab0ad.js js/Index-96e08ca25afa5acab0ad.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4344ms (Views: 4343.5ms | ActiveRecord: 0.0ms | Allocations: 7467)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:09:11 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 6232)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:11:23 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 7249)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:11:27 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 6233)
+
+
+Started GET "/auth/login" for ::1 at 2020-12-11 17:12:06 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"auth/login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 6227)
+
+
+Started GET "/auth" for ::1 at 2020-12-11 17:12:10 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"auth"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 6242)
+
+
+Started GET "/auth/register" for ::1 at 2020-12-11 17:12:14 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"auth/register"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 6234)
+
+
+Started GET "/auth/register" for ::1 at 2020-12-11 17:14:04 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"auth/register"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 6232)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:14:08 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 6231)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:16:06 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 0186da478810047cb3ad
+Version: webpack 4.44.2
+Time: 1176ms
+Built at: 11.12.2020 17:16:09
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-e5c7166652f4a73c42cf.js    316 KiB        Index  [emitted] [immutable]  Index
+      js/Index-e5c7166652f4a73c42cf.js.map    371 KiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-e5c7166652f4a73c42cf.js js/Index-e5c7166652f4a73c42cf.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 2.08 KiB {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 4 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3056ms (Views: 3055.2ms | ActiveRecord: 0.0ms | Allocations: 7462)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:18:08 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: f33065462b030d28efd5
+Version: webpack 4.44.2
+Time: 1100ms
+Built at: 11.12.2020 17:18:11
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-2b7e00fb63a1b52e6f29.js    316 KiB        Index  [emitted] [immutable]  Index
+      js/Index-2b7e00fb63a1b52e6f29.js.map    371 KiB        Index  [emitted] [dev]        Index
+    js/application-197233e13f8423640e5d.js    124 KiB  application  [emitted] [immutable]  application
+js/application-197233e13f8423640e5d.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-197233e13f8423640e5d.js js/application-197233e13f8423640e5d.js.map
+Entrypoint Index = js/Index-2b7e00fb63a1b52e6f29.js js/Index-2b7e00fb63a1b52e6f29.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.js] 2.08 KiB {Index} [built]
+[./app/javascript/packs/application.js] 799 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '@rails/actiontext' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 21:0-28
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'trix' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 19:0-15
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3054ms (Views: 3051.4ms | ActiveRecord: 0.0ms | Allocations: 7382)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:19:11 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: bf3c2fcf56154b1cdc10
+Version: webpack 4.44.2
+Time: 3944ms
+Built at: 11.12.2020 17:19:16
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-96e08ca25afa5acab0ad.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-96e08ca25afa5acab0ad.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-ece534d5053afb9719f4.js    124 KiB  application  [emitted] [immutable]  application
+js/application-ece534d5053afb9719f4.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-ece534d5053afb9719f4.js js/application-ece534d5053afb9719f4.js.map
+Entrypoint Index = js/Index-96e08ca25afa5acab0ad.js js/Index-96e08ca25afa5acab0ad.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 781 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '@rails/actiontext' in '/Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 19:0-28
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5440ms (Views: 5433.1ms | ActiveRecord: 0.0ms | Allocations: 7386)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:19:23 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: b6b03655ba5af46a5380
+Version: webpack 4.44.2
+Time: 2906ms
+Built at: 11.12.2020 17:19:27
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-96e08ca25afa5acab0ad.js   2.66 MiB        Index  [emitted] [immutable]  Index
+      js/Index-96e08ca25afa5acab0ad.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-96e08ca25afa5acab0ad.js js/Index-96e08ca25afa5acab0ad.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.76 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 45 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4339ms (Views: 4338.5ms | ActiveRecord: 0.0ms | Allocations: 7466)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:19:33 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 6226)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:20:48 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ingibitr/Documents/Ruby_labs2/Ruby_labs/final_app_v2/public/packs
+[Webpacker] Hash: 3e292cbb76a1eb61623b
+Version: webpack 4.44.2
+Time: 3317ms
+Built at: 11.12.2020 17:20:53
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-5b31759c195f537a17b8.js   2.73 MiB        Index  [emitted] [immutable]  Index
+      js/Index-5b31759c195f537a17b8.js.map   2.98 MiB        Index  [emitted] [dev]        Index
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint Index = js/Index-5b31759c195f537a17b8.js js/Index-5b31759c195f537a17b8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/Index.jsx] 677 bytes {Index} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 2.24 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {Index} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4821ms (Views: 4820.3ms | ActiveRecord: 0.0ms | Allocations: 7536)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:20:57 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 6278)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:20:59 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 6276)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:21:02 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms | Allocations: 6280)
+
+
+Started GET "/" for ::1 at 2020-12-11 17:21:05 +0300
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 6281)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:21:20 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 6278)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:24:00 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 6400)
+
+
+Started GET "/login" for ::1 at 2020-12-11 17:24:14 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 6278)
+
+
+Started GET "/auth/login" for ::1 at 2020-12-11 17:24:22 +0300
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"auth/login"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6281)
+
+
