@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lab6pt2module'
 require 'minitest/autorun'
 

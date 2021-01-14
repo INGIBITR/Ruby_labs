@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module EnumCalc
   def self.newCalc(eps)
     overallSum = 0.0

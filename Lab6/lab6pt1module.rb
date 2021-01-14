@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Integral
   def self.input(numberOfIterations)
     inpstring = ''

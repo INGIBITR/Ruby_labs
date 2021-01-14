@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lab6pt1module'
 puts('enter precision of your wish')
 inputString = gets
